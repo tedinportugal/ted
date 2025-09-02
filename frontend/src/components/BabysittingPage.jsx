@@ -8,20 +8,47 @@ const BabysittingPage = ({ currentLanguage, setCurrentPage }) => {
   const service = mockData.services.babysitting;
   const t = languages[currentLanguage];
 
-  const childrenOptions = [
-    { key: '1child', label: '1 Child', emoji: '👶' },
-    { key: '2children', label: '2 Children', emoji: '👶👶' },
-    { key: '3children', label: 'Up to 3 Children', emoji: '👶👶👶' },
-    { key: '5children', label: 'Up to 5 Children', emoji: '👶👶👶👶👶' },
-    { key: '8children', label: 'Up to 8 Children', emoji: '👶👶👶👶👶👶👶👶' }
-  ];
+  const getChildrenOptions = (currentLang) => {
+    const translations = {
+      pt: [
+        { key: '1child', label: '1 Criança', emoji: '👶' },
+        { key: '2children', label: '2 Crianças', emoji: '👶👶' },
+        { key: '3children', label: 'Até 3 Crianças', emoji: '👶👶👶' },
+        { key: '5children', label: 'Até 5 Crianças', emoji: '👶👶👶👶👶' },
+        { key: '8children', label: 'Até 8 Crianças', emoji: '👶👶👶👶👶👶👶👶' }
+      ],
+      en: [
+        { key: '1child', label: '1 Child', emoji: '👶' },
+        { key: '2children', label: '2 Children', emoji: '👶👶' },
+        { key: '3children', label: 'Up to 3 Children', emoji: '👶👶👶' },
+        { key: '5children', label: 'Up to 5 Children', emoji: '👶👶👶👶👶' },
+        { key: '8children', label: 'Up to 8 Children', emoji: '👶👶👶👶👶👶👶👶' }
+      ],
+      es: [
+        { key: '1child', label: '1 Niño', emoji: '👶' },
+        { key: '2children', label: '2 Niños', emoji: '👶👶' },
+        { key: '3children', label: 'Hasta 3 Niños', emoji: '👶👶👶' },
+        { key: '5children', label: 'Hasta 5 Niños', emoji: '👶👶👶👶👶' },
+        { key: '8children', label: 'Hasta 8 Niños', emoji: '👶👶👶👶👶👶👶👶' }
+      ],
+      fr: [
+        { key: '1child', label: '1 Enfant', emoji: '👶' },
+        { key: '2children', label: '2 Enfants', emoji: '👶👶' },
+        { key: '3children', label: 'Jusqu\'à 3 Enfants', emoji: '👶👶👶' },
+        { key: '5children', label: 'Jusqu\'à 5 Enfants', emoji: '👶👶👶👶👶' },
+        { key: '8children', label: 'Jusqu\'à 8 Enfants', emoji: '👶👶👶👶👶👶👶👶' }
+      ]
+    };
+    return translations[currentLang] || translations['en'];
+  };
 
+  const childrenOptions = getChildrenOptions(currentLanguage);
   const timeOptions = [
-    { key: '1hour', label: '1 Hour', duration: '1h' },
-    { key: '2hours', label: '2 Hours', duration: '2h' },
-    { key: '3hours', label: '3 Hours', duration: '3h' },
-    { key: '4hours', label: '4 Hours', duration: '4h' },
-    { key: '6hours', label: '6 Hours Complete', duration: '6h' }
+    { key: '1hour', label: t.services.babysitting.pricing.hours['1hour'], duration: '1h' },
+    { key: '2hours', label: t.services.babysitting.pricing.hours['2hours'], duration: '2h' },
+    { key: '3hours', label: t.services.babysitting.pricing.hours['3hours'], duration: '3h' },
+    { key: '4hours', label: t.services.babysitting.pricing.hours['4hours'], duration: '4h' },
+    { key: '6hours', label: t.services.babysitting.pricing.hours['6hours'], duration: '6h' }
   ];
 
   return (
