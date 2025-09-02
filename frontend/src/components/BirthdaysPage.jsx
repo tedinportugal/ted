@@ -195,34 +195,56 @@ const BirthdaysPage = ({ currentLanguage, setCurrentPage }) => {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What's Included with Ted's Photo */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Every Party Includes</GradientText>
-            </h2>
-            <p className="text-xl text-gray-600">Standard inclusions in all birthday party packages</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Palette, title: 'Decorations', desc: 'Themed decorations and setup' },
-              { icon: Music, title: 'Entertainment', desc: 'Music and interactive games' },
-              { icon: Camera, title: 'Memories', desc: 'Photos of special moments' },
-              { icon: Cake, title: 'Activities', desc: 'Age-appropriate fun activities' }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mb-4">
-                  <item.icon className="w-8 h-8 text-white" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="w-full max-w-md mx-auto">
+                <div className="relative">
+                  <div className="w-80 h-80 rounded-3xl overflow-hidden border-8 border-white shadow-2xl mx-auto">
+                    <img
+                      src={tedRealPhoto}
+                      alt="Ted - Your Party Host"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Fixed decorative elements around Ted's photo */}
+                  <div className="absolute -top-4 -right-4 text-4xl">🎂</div>
+                  <div className="absolute -bottom-4 -left-4 text-4xl">🎁</div>
+                  <div className="absolute top-1/2 -left-8 text-3xl animate-glow">🎉</div>
+                  <div className="absolute bottom-1/4 -right-8 text-3xl">🎊</div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
               </div>
-            ))}
+            </div>
+
+            <div>
+              <h2 className="bubble-text text-4xl font-bold mb-4">
+                <GradientText>{t.services.birthdays.included?.title || "Every Party Includes"}</GradientText>
+              </h2>
+              <p className="soft-text text-xl text-gray-600 mb-8">{t.services.birthdays.included?.subtitle || "Standard inclusions in all birthday party packages"}</p>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {[
+                  { icon: Palette, title: t.services.birthdays.included?.decorations?.title || 'Decorations', desc: t.services.birthdays.included?.decorations?.desc || 'Themed decorations and setup' },
+                  { icon: Music, title: t.services.birthdays.included?.entertainment?.title || 'Entertainment', desc: t.services.birthdays.included?.entertainment?.desc || 'Music and interactive games' },
+                  { icon: Camera, title: t.services.birthdays.included?.memories?.title || 'Memories', desc: t.services.birthdays.included?.memories?.desc || 'Photos of special moments' },
+                  { icon: Cake, title: t.services.birthdays.included?.activities?.title || 'Activities', desc: t.services.birthdays.included?.activities?.desc || 'Age-appropriate fun activities' }
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mb-4">
+                      <item.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="bubble-text text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                    <p className="soft-text text-gray-600">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
