@@ -6,6 +6,7 @@ import { MagicalButton, GradientText, ConfettiEffect } from './MagicalElements';
 const HomePage = ({ currentLanguage, setCurrentPage }) => {
   const [showConfetti, setShowConfetti] = useState(false);
   const t = languages[currentLanguage];
+  const tedRealPhoto = "https://customer-assets.emergentagent.com/job_skate-party/artifacts/pg049z35_5D7B8BF4-317A-4305-A85C-42BA646C6DC4.png";
 
   useEffect(() => {
     // Show confetti on page load
