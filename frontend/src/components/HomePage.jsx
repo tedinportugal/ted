@@ -17,30 +17,30 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
   const services = [
     {
       key: 'babysitting',
-      title: mockData.services.babysitting.title,
-      description: mockData.services.babysitting.description,
+      title: t.services.babysitting.title,
+      description: t.services.babysitting.description,
       icon: Heart,
       color: 'from-pink-400 to-pink-600',
-      price: 'From 15€/hour',
-      features: ['Creative activities', 'Safe & fun', 'All ages']
+      price: `${t.common.from} 30€/hora`,
+      features: [t.services.babysitting.features[0], t.services.babysitting.features[4], 'Todas as idades']
     },
     {
       key: 'birthdays',
-      title: mockData.services.birthdays.title,
-      description: mockData.services.birthdays.description,
+      title: t.services.birthdays.title,
+      description: t.services.birthdays.description,
       icon: Star,
       color: 'from-purple-400 to-purple-600',
-      price: 'From 120€/party',
-      features: ['Themed parties', 'Decorations included', 'Magical moments']
+      price: `${t.common.from} 120€/festa`,
+      features: ['Festas temáticas', 'Decorações incluídas', 'Momentos mágicos']
     },
     {
       key: 'skate',
-      title: mockData.services.skate.title,
-      description: mockData.services.skate.description,
+      title: t.services.skate.title,
+      description: t.services.skate.description,
       icon: Zap,
       color: 'from-blue-400 to-blue-600',
-      price: 'From 25€/lesson',
-      features: ['All skill levels', 'Equipment included', 'Safety first']
+      price: `${t.common.from} 25€/aula`,
+      features: ['Todos os níveis', 'Equipamento incluído', 'Segurança primeiro']
     }
   ];
 
