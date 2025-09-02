@@ -1062,15 +1062,22 @@ export const languages = {
         title: "Especialidades de Ted",
         subtitle: "Lo que hace especial a Ted en el entretenimiento infantil",
         creative: "Actividades Creativas",
+        creativeDesc: "Artes, manualidades y juego imaginativo",
         educational: "Juegos Educativos",
+        educationalDesc: "Aprendizaje a través de la diversión e interacción",
         outdoor: "Aventuras al Aire Libre",
-        arts: "Artes y Manualidades"
+        outdoorDesc: "Exploración segura y juego activo",
+        arts: "Artes y Manualidades",
+        artsDesc: "Proyectos creativos prácticos"
       },
       experience: {
         title: "Experiencia y Calificaciones",
         certifications: "Certificaciones Profesionales",
-        experienceDesc: "Amplia experiencia trabajando con niños de todas las edades",
-        passion: "Pasión por los Niños"
+        certificationsDesc: "Certificado TEA y S21, garantizando los más altos estándares en el cuidado y entretenimiento de niños.",
+        experienceTitle: "Experiencia Profesional",
+        experienceDesc: "Amplia experiencia trabajando con niños de todas las edades, creando ambientes seguros y atractivos.",
+        passion: "Pasión por los Niños",
+        passionDesc: "Amor genuino por trabajar con niños, creando momentos mágicos que inspiran creatividad y alegría."
       },
       cta: {
         title: "¿Listo para Conocer a Ted?",
