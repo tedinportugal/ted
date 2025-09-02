@@ -1,22 +1,13 @@
-/* Custom animations for magical elements */
+/* Custom animations for magical elements - gentle and non-bouncing */
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+@keyframes subtle-glow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
 }
 
-@keyframes sparkle {
-    0%, 100% { opacity: 0; transform: scale(0.5); }
-    50% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes wiggle {
-    0%, 7%, 14%, 21%, 28%, 35%, 42%, 49%, 56%, 63%, 70%, 77%, 84%, 91%, 98%, 100% {
-        transform: rotate(0deg);
-    }
-    3.5%, 10.5%, 17.5%, 24.5%, 31.5%, 38.5%, 45.5%, 52.5%, 59.5%, 66.5%, 73.5%, 80.5%, 87.5%, 94.5% {
-        transform: rotate(-1deg);
-    }
+@keyframes gentle-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 @keyframes rainbow {
@@ -25,28 +16,51 @@
     100% { background-position: 0% 50%; }
 }
 
-.animate-float {
-    animation: float 3s ease-in-out infinite;
+.animate-glow {
+    animation: subtle-glow 3s ease-in-out infinite;
 }
 
-.animate-sparkle {
-    animation: sparkle 2s ease-in-out infinite;
-}
-
-.animate-wiggle {
-    animation: wiggle 1s ease-in-out infinite;
+.animate-gentle-pulse {
+    animation: gentle-pulse 4s ease-in-out infinite;
 }
 
 .animate-rainbow {
     background-size: 400% 400%;
-    animation: rainbow 3s ease infinite;
+    animation: rainbow 6s ease infinite;
 }
 
 /* Magical gradient backgrounds */
 .magic-gradient {
     background: linear-gradient(-45deg, #ff6b35, #f7931e, #20b2aa, #6a5acd);
     background-size: 400% 400%;
-    animation: rainbow 3s ease infinite;
+    animation: rainbow 6s ease infinite;
+}
+
+/* Rounded, bubble-like typography */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* Main headings - bubble-like and playful */
+h1, h2, h3 {
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 0.5px;
+}
+
+/* Body text and UI elements - rounded and readable */
+body, p, span, button, input, select, textarea, div {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+/* Make all text more rounded and soft */
+.bubble-text {
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.soft-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 /* Custom scrollbar */
