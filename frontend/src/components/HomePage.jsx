@@ -287,11 +287,11 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
                     ))}
                   </div>
                   
-                  <p className="soft-text text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                  <p className="soft-text text-gray-700 mb-4 italic">"{testimonial.text[currentLanguage] || testimonial.text.en}"</p>
                   
                   <div className="border-t pt-4">
                     <div className="bubble-text font-semibold text-gray-800">{testimonial.name}</div>
-                    <div className="soft-text text-sm text-orange-600">{testimonial.service}</div>
+                    <div className="soft-text text-sm text-orange-600">{testimonial.service[currentLanguage] || testimonial.service.en}</div>
                   </div>
                 </div>
               ))}
