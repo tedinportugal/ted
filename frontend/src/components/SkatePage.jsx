@@ -7,6 +7,7 @@ const SkatePage = ({ currentLanguage, setCurrentPage }) => {
   const [selectedLevel, setSelectedLevel] = useState(0);
   const service = mockData.services.skate;
   const t = languages[currentLanguage];
+  const tedRealPhoto = "https://customer-assets.emergentagent.com/job_skate-party/artifacts/pg049z35_5D7B8BF4-317A-4305-A85C-42BA646C6DC4.png";
 
   const pricingOptions = [
     {
