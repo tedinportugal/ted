@@ -65,11 +65,11 @@ const ContactPage = ({ currentLanguage }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Mock form submission
-    alert('Thank you! Ted will contact you soon. For immediate response, please use WhatsApp.');
+    alert(t.contact.form.thankYou || 'Thank you! Ted will contact you soon. For immediate response, please use WhatsApp.');
   };
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent(`Hi Ted! I'm interested in ${formData.service || 'your services'}. ${selectedDate ? `I'm looking at ${selectedDate.date.toLocaleDateString()}. ` : ''}Can we chat?`);
+    const message = encodeURIComponent(`${t.contact.form.whatsappMessage || `Hi Ted! I'm interested in ${formData.service || 'your services'}. ${selectedDate ? `I'm looking at ${selectedDate.date.toLocaleDateString()}. ` : ''}Can we chat?`}`);
     window.open(`https://wa.me/${contact.whatsapp.replace('+', '')}?text=${message}`, '_blank');
   };
 
