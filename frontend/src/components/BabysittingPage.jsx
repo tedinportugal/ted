@@ -61,30 +61,30 @@ const BabysittingPage = ({ currentLanguage, setCurrentPage }) => {
               <Heart className="w-10 h-10 text-white fill-current" />
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <GradientText>{service.title}</GradientText>
+            <h1 className="bubble-text text-5xl md:text-6xl font-bold mb-6">
+              <GradientText>{t.services.babysitting.title}</GradientText>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-8">
-              {service.description}
+            <p className="soft-text text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-8">
+              {t.services.babysitting.description}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-lg">
                 <Clock className="w-5 h-5 text-purple-500" />
-                <span className="font-semibold text-gray-700">{service.schedule}</span>
+                <span className="soft-text font-semibold text-gray-700">{t.services.babysitting.schedule}</span>
               </div>
               
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-lg">
                 <MapPin className="w-5 h-5 text-orange-500" />
-                <span className="font-semibold text-gray-700">{service.location}</span>
+                <span className="soft-text font-semibold text-gray-700">{t.services.babysitting.location}</span>
               </div>
             </div>
 
             <div className="bg-orange-100 border-l-4 border-orange-500 p-4 rounded-lg inline-block">
-              <p className="text-orange-800 font-medium">
+              <p className="soft-text text-orange-800 font-medium">
                 <Star className="w-4 h-4 inline mr-2" />
-                {service.season}
+                {t.services.babysitting.season}
               </p>
             </div>
           </div>
