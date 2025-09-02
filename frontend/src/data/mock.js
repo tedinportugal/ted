@@ -1084,7 +1084,9 @@ export const languages = {
         subtitle: "¡Vamos a crear recuerdos mágicos para tus niños juntos!",
         contact: "Contactar Ted",
         services: "Explorar Servicios"
-      }
+      },
+      certified: "Profesional Certificado",
+      certifiedDesc: "Ted combina formación profesional y pasión genuina para crear experiencias inolvidables para los niños."
     },
     contact: {
       title: "Ponerse en Contacto",
