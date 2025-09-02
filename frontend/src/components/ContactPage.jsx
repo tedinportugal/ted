@@ -17,11 +17,18 @@ const ContactPage = ({ currentLanguage }) => {
   const contact = mockData.contact;
   const t = languages[currentLanguage];
 
-  // Generate mock calendar for next 30 days
+  // Generate mock calendar for next 30 days with translated day names
   const generateCalendar = () => {
     const days = [];
     const today = new Date();
     const unavailable = mockData.availability.unavailableDates;
+    
+    const dayNames = {
+      pt: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+      en: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      es: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+      fr: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam']
+    };
     
     for (let i = 0; i < 30; i++) {
       const date = new Date(today);
@@ -32,7 +39,7 @@ const ContactPage = ({ currentLanguage }) => {
         date: date,
         dateString: dateString,
         available: !unavailable.includes(dateString),
-        dayName: date.toLocaleDateString('en', { weekday: 'short' }),
+        dayName: dayNames[currentLanguage][date.getDay()],
         dayNumber: date.getDate()
       });
     }
