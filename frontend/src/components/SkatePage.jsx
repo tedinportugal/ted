@@ -201,34 +201,56 @@ const SkatePage = ({ currentLanguage, setCurrentPage }) => {
         </div>
       </section>
 
-      {/* Safety & Equipment */}
+      {/* Safety & Equipment with Ted's Photo */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Safety & Equipment</GradientText>
-            </h2>
-            <p className="text-xl text-gray-600">Your safety is our top priority</p>
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="bubble-text text-4xl font-bold mb-4">
+                <GradientText>{t.services.skate.safety?.title || "Safety & Equipment"}</GradientText>
+              </h2>
+              <p className="soft-text text-xl text-gray-600 mb-8">{t.services.skate.safety?.subtitle || "Your safety is our top priority"}</p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Shield, title: 'Safety First', desc: 'Professional safety instruction', color: 'text-green-500' },
-              { icon: Users, title: 'Expert Teaching', desc: 'Experienced and certified instructor', color: 'text-blue-500' },
-              { icon: Trophy, title: 'Quality Equipment', desc: 'Professional skateboards and gear', color: 'text-orange-500' },
-              { icon: Star, title: 'Proven Method', desc: 'Progressive learning approach', color: 'text-purple-500' }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="text-center bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4 shadow-lg`}>
-                  <item.icon className={`w-8 h-8 ${item.color}`} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+              <div className="grid md:grid-cols-2 gap-8">
+                {[
+                  { icon: Shield, title: t.services.skate.safety?.safetyFirst?.title || 'Safety First', desc: t.services.skate.safety?.safetyFirst?.desc || 'Professional safety instruction', color: 'text-green-500' },
+                  { icon: Users, title: t.services.skate.safety?.expertTeaching?.title || 'Expert Teaching', desc: t.services.skate.safety?.expertTeaching?.desc || 'Experienced and certified instructor', color: 'text-blue-500' },
+                  { icon: Trophy, title: t.services.skate.safety?.qualityEquipment?.title || 'Quality Equipment', desc: t.services.skate.safety?.qualityEquipment?.desc || 'Professional skateboards and gear', color: 'text-orange-500' },
+                  { icon: Star, title: t.services.skate.safety?.provenMethod?.title || 'Proven Method', desc: t.services.skate.safety?.provenMethod?.desc || 'Progressive learning approach', color: 'text-purple-500' }
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="text-center bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
+                    <div className={`inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4 shadow-lg`}>
+                      <item.icon className={`w-8 h-8 ${item.color}`} />
+                    </div>
+                    <h3 className="bubble-text text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                    <p className="soft-text text-gray-600">{item.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="relative">
+              <div className="w-full max-w-md mx-auto">
+                <div className="relative">
+                  <div className="w-80 h-80 rounded-3xl overflow-hidden border-8 border-white shadow-2xl mx-auto">
+                    <img
+                      src={tedRealPhoto}
+                      alt="Ted - Your Skate Instructor"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Fixed decorative elements around Ted's photo */}
+                  <div className="absolute -top-4 -right-4 text-4xl">🛹</div>
+                  <div className="absolute -bottom-4 -left-4 text-4xl">⚡</div>
+                  <div className="absolute top-1/2 -left-8 text-3xl animate-glow">🏆</div>
+                  <div className="absolute bottom-1/4 -right-8 text-3xl">🎯</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
