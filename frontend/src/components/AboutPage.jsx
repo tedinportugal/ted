@@ -34,7 +34,7 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
               </h1>
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                {about.bio}
+                {t.about.bio}
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -48,13 +48,13 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <MagicalButton onClick={() => setCurrentPage('contact')}>
-                  Get in Touch
+                  {t.about.cta.contact}
                 </MagicalButton>
                 <MagicalButton 
                   onClick={() => setCurrentPage('home')}
                   variant="outline"
                 >
-                  See Services
+                  {t.about.cta.services}
                 </MagicalButton>
               </div>
             </div>
