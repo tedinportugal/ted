@@ -324,10 +324,10 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
       <section className="py-20 bg-gradient-to-r from-orange-400 to-teal-400">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="bubble-text text-4xl font-bold text-white mb-6 animate-gentle-pulse">
-            {t.hero.ctaTitle || "Ready for Some Magic?"}
+            {t.common.readyForMagic || "Ready for Some Magic?"}
           </h2>
           <p className="soft-text text-xl text-orange-100 mb-8">
-            {t.hero.ctaSubtitle || "Book Ted today and create unforgettable memories for your children!"}
+            {t.common.bookToday || "Book Ted today and create unforgettable memories for your children!"}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
