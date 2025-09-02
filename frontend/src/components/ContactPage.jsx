@@ -220,22 +220,22 @@ const ContactPage = ({ currentLanguage }) => {
               <div className="flex justify-center gap-6 mt-6 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 bg-green-200 rounded"></div>
-                  <span>Available</span>
+                  <span className="soft-text">{t.contact.availability.available}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 bg-red-200 rounded"></div>
-                  <span>Unavailable</span>
+                  <span className="soft-text">{t.contact.availability.unavailable}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 bg-orange-500 rounded"></div>
-                  <span>Selected</span>
+                  <span className="soft-text">{t.contact.availability.selected}</span>
                 </div>
               </div>
 
               {selectedDate && (
                 <div className="mt-6 p-4 bg-orange-50 rounded-2xl border-2 border-orange-200">
-                  <p className="text-orange-800 font-semibold text-center">
-                    📅 Selected: {selectedDate.date.toLocaleDateString('en', { 
+                  <p className="soft-text text-orange-800 font-semibold text-center">
+                    📅 {t.contact.availability.selected}: {selectedDate.date.toLocaleDateString(currentLanguage === 'pt' ? 'pt-PT' : currentLanguage === 'es' ? 'es-ES' : currentLanguage === 'fr' ? 'fr-FR' : 'en-GB', { 
                       weekday: 'long', 
                       year: 'numeric', 
                       month: 'long', 
