@@ -52,10 +52,10 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
       <section className="relative bg-gradient-to-br from-orange-100 via-teal-50 to-purple-100 py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-bounce">
+            <h1 className="bubble-text text-5xl md:text-7xl font-bold mb-6">
               <GradientText>{t.hero.title}</GradientText>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+            <p className="soft-text text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
               {t.hero.subtitle}
             </p>
             
