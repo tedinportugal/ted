@@ -3,21 +3,64 @@ export const mockData = {
   services: {
     babysitting: {
       title: "Babysitting with Ted",
-      description: "Professional and fun babysitting services with creative activities, games, and lots of laughter!",
+      description: "Professional and exclusive babysitting services at Hotel Aquashow with creative activities, games, and lots of laughter!",
+      schedule: "19:30 - 02:00",
       features: [
-        "Creative activities and games",
-        "Face painting and arts & crafts",
-        "Educational play time",
-        "Outdoor adventures",
-        "Healthy snacks preparation",
-        "Bedtime stories and routines"
+        "Free play activities and games",
+        "Dancing and music",
+        "Storytelling sessions", 
+        "Calm games and activities",
+        "Complete childcare supervision",
+        "Creative workshops (optional)"
       ],
       pricing: {
-        hourly: "15€/hour",
-        halfDay: "50€/4 hours",
-        fullDay: "90€/8 hours",
-        overnight: "120€/night"
+        "1child": {
+          "1hour": "30€",
+          "2hours": "50€", 
+          "3hours": "70€",
+          "4hours": "85€",
+          "6hours": "115€"
+        },
+        "2children": {
+          "1hour": "40€",
+          "2hours": "70€",
+          "3hours": "95€", 
+          "4hours": "110€",
+          "6hours": "150€"
+        },
+        "3children": {
+          "1hour": "50€",
+          "2hours": "80€",
+          "3hours": "110€",
+          "4hours": "130€", 
+          "6hours": "170€"
+        },
+        "5children": {
+          "1hour": "60€",
+          "2hours": "100€",
+          "3hours": "140€",
+          "4hours": "160€",
+          "6hours": "200€"
+        },
+        "8children": {
+          "1hour": "75€", 
+          "2hours": "120€",
+          "3hours": "170€",
+          "4hours": "200€",
+          "6hours": "260€"
+        }
       },
+      workshops: {
+        "micangas": {
+          "1child": "10€",
+          "2children": "18€", 
+          "8children": "30€",
+          "duration": "30-45 min",
+          "description": "Creative beading workshop - each child takes home their creation"
+        }
+      },
+      location: "Hotel Aquashow (Exclusive)",
+      season: "Summer period: July and August 2025",
       ages: "All ages welcome"
     },
     birthdays: {
