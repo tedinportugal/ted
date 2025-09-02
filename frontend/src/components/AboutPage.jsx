@@ -9,17 +9,17 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
   const tedLogoUrl = "https://customer-assets.emergentagent.com/job_skate-party/artifacts/0195n2c4_1EFB7748-DA5F-4EA5-914F-2AC90C2B4BEB.png";
 
   const stats = [
-    { number: '500+', label: 'Happy Children', icon: Heart, color: 'text-pink-500' },
-    { number: '3+', label: 'Years Experience', icon: Star, color: 'text-yellow-500' },
-    { number: '4', label: 'Languages', icon: Globe, color: 'text-blue-500' },
-    { number: '100+', label: 'Parties Organized', icon: Users, color: 'text-purple-500' }
+    { number: t.common.happyKids, label: t.about.stats.happyKids, icon: Heart, color: 'text-pink-500' },
+    { number: t.common.yearsExp, label: t.about.stats.experience, icon: Star, color: 'text-yellow-500' },
+    { number: '4', label: t.about.stats.languages, icon: Globe, color: 'text-blue-500' },
+    { number: '100+', label: t.about.stats.parties, icon: Users, color: 'text-purple-500' }
   ];
 
   const specialties = [
-    { name: 'Creative Activities', icon: Sparkles, description: 'Arts, crafts, and imaginative play' },
-    { name: 'Educational Games', icon: BookOpen, description: 'Learning through fun and interaction' },
-    { name: 'Outdoor Adventures', icon: Shield, description: 'Safe exploration and active play' },
-    { name: 'Arts & Crafts', icon: Award, description: 'Hands-on creative projects' }
+    { name: t.about.specialties.creative, icon: Sparkles, description: t.about.specialties.creativeDesc },
+    { name: t.about.specialties.educational, icon: BookOpen, description: t.about.specialties.educationalDesc },
+    { name: t.about.specialties.outdoor, icon: Shield, description: t.about.specialties.outdoorDesc },
+    { name: t.about.specialties.arts, icon: Award, description: t.about.specialties.artsDesc }
   ];
 
   return (
