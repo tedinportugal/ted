@@ -134,114 +134,99 @@ const ContactPage = ({ currentLanguage }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-orange-50 to-purple-50">
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <GradientText>Get in Touch</GradientText>
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="bubble-text text-4xl md:text-5xl font-bold mb-4">
+            <GradientText>{currentStep === 4 ? getStepTitle() : t.contact.title}</GradientText>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-8">
-            Ready to create magical memories? Let's plan something amazing for your children!
+          <p className="soft-text text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-8">
+            {currentStep === 4 
+              ? (currentLanguage === 'pt' ? 'Ted entrará em contacto consigo em breve via WhatsApp!' 
+                : currentLanguage === 'es' ? '¡Ted se pondrá en contacto contigo pronto vía WhatsApp!' 
+                : currentLanguage === 'fr' ? 'Ted vous contactera bientôt via WhatsApp!'
+                : 'Ted will contact you soon via WhatsApp!')
+              : t.contact.subtitle
+            }
           </p>
+
+          {/* Progress Steps */}
+          {currentStep < 4 && (
+            <div className="flex justify-center items-center mb-8">
+              <div className="flex items-center space-x-4">
+                {[1, 2, 3].map((step) => (
+                  <React.Fragment key={step}>
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
+                      currentStep >= step 
+                        ? 'bg-orange-500 text-white shadow-lg' 
+                        : 'bg-gray-200 text-gray-500'
+                    }`}>
+                      {step}
+                    </div>
+                    {step < 3 && (
+                      <div className={`w-8 h-1 transition-all duration-300 ${
+                        currentStep > step ? 'bg-orange-500' : 'bg-gray-200'
+                      }`}></div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <h2 className="bubble-text text-2xl font-bold text-gray-800 mb-8">{getStepTitle()}</h2>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <h2 className="text-3xl font-bold mb-6">
-                <GradientText>Contact Information</GradientText>
-              </h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-white" />
+      {/* Step Content */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        
+        {/* Step 1: Choose Service */}
+        {currentStep === 1 && (
+          <div className="grid md:grid-cols-3 gap-8">
+            {serviceOptions.map((service) => (
+              <div
+                key={service.id}
+                onClick={() => handleServiceSelect(service.id)}
+                className="cursor-pointer bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 overflow-hidden border-4 border-transparent hover:border-orange-200"
+              >
+                <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
+                
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <div className="text-6xl mb-4">{service.icon}</div>
+                    <h3 className="bubble-text text-2xl font-bold mb-4 text-gray-800">{service.title}</h3>
+                    <p className="soft-text text-gray-600 mb-4 leading-relaxed">{service.description}</p>
+                    <div className="text-2xl font-bold text-orange-600">{service.price}</div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-800">WhatsApp (Preferred)</h3>
-                    <p className="text-gray-600">{contact.whatsapp}</p>
-                  </div>
-                  <MagicalButton onClick={handleWhatsApp} className="text-sm px-4 py-2">
-                    Chat Now
+
+                  <MagicalButton className="w-full" variant="secondary">
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    {t.common.choosePackage || "Choose This Service"}
                   </MagicalButton>
                 </div>
-
-                <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl">
-                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Phone</h3>
-                    <p className="text-gray-600">{contact.phone}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-orange-50 to-pink-50 rounded-2xl">
-                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Email</h3>
-                    <p className="text-gray-600">{contact.email}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl">
-                  <div className="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center">
-                    <Instagram className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-800">Instagram</h3>
-                    <p className="text-gray-600">{contact.instagram}</p>
-                  </div>
-                  <MagicalButton onClick={handleInstagram} variant="secondary" className="text-sm px-4 py-2">
-                    Follow
-                  </MagicalButton>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl">
-                  <div className="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Location</h3>
-                    <p className="text-gray-600">{contact.location}</p>
-                  </div>
-                </div>
               </div>
-            </div>
-
-            {/* Service Hours */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold mb-6">
-                <GradientText>Service Hours</GradientText>
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-orange-500" />
-                  <span className="font-medium">Babysitting: 19:30 - 02:00</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-purple-500" />
-                  <span className="font-medium">Birthday Parties: Flexible timing</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-blue-500" />
-                  <span className="font-medium">Skate Lessons: By appointment</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+        )}
 
-          {/* Contact Form & Calendar */}
-          <div className="space-y-8">
-            {/* Availability Calendar */}
+        {/* Step 2: Choose Date */}
+        {currentStep === 2 && (
+          <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <h2 className="text-3xl font-bold mb-6">
-                <GradientText>Check Availability</GradientText>
-              </h2>
+              <div className="text-center mb-8">
+                <div className="inline-block bg-orange-100 rounded-full p-4 mb-4">
+                  <Calendar className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="bubble-text text-2xl font-bold text-gray-800 mb-2">
+                  {selectedService && serviceOptions.find(s => s.id === selectedService)?.title}
+                </h3>
+                <p className="soft-text text-gray-600">
+                  {currentLanguage === 'pt' ? 'Selecione uma data disponível' 
+                    : currentLanguage === 'es' ? 'Selecciona una fecha disponible'
+                    : currentLanguage === 'fr' ? 'Sélectionnez une date disponible'
+                    : 'Select an available date'}
+                </p>
+              </div>
               
               <div className="grid grid-cols-7 gap-2 mb-4">
                 {t.contact.calendar.days.map(day => (
@@ -251,17 +236,15 @@ const ContactPage = ({ currentLanguage }) => {
                 ))}
               </div>
               
-              <div className="grid grid-cols-7 gap-2">
+              <div className="grid grid-cols-7 gap-2 mb-6">
                 {calendarDays.map((day, index) => (
                   <button
                     key={index}
                     onClick={() => handleDateSelect(day)}
                     disabled={!day.available}
                     className={`p-3 rounded-lg text-center transition-all duration-300 ${
-                      selectedDate?.dateString === day.dateString
-                        ? 'bg-orange-500 text-white scale-110 shadow-lg'
-                        : day.available
-                        ? 'bg-green-100 hover:bg-green-200 text-green-800 hover:scale-105'
+                      day.available
+                        ? 'bg-green-100 hover:bg-green-200 text-green-800 hover:scale-105 cursor-pointer'
                         : 'bg-red-100 text-red-400 cursor-not-allowed'
                     }`}
                   >
@@ -271,7 +254,7 @@ const ContactPage = ({ currentLanguage }) => {
                 ))}
               </div>
               
-              <div className="flex justify-center gap-6 mt-6 text-sm">
+              <div className="flex justify-center gap-6 mb-6 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 bg-green-200 rounded"></div>
                   <span className="soft-text">{t.contact.availability.available}</span>
@@ -280,31 +263,40 @@ const ContactPage = ({ currentLanguage }) => {
                   <div className="w-4 h-4 bg-red-200 rounded"></div>
                   <span className="soft-text">{t.contact.availability.unavailable}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-orange-500 rounded"></div>
-                  <span className="soft-text">{t.contact.availability.selected}</span>
-                </div>
               </div>
 
-              {selectedDate && (
-                <div className="mt-6 p-4 bg-orange-50 rounded-2xl border-2 border-orange-200">
-                  <p className="soft-text text-orange-800 font-semibold text-center">
-                    📅 {t.contact.availability.selected}: {selectedDate.date.toLocaleDateString(currentLanguage === 'pt' ? 'pt-PT' : currentLanguage === 'es' ? 'es-ES' : currentLanguage === 'fr' ? 'fr-FR' : 'en-GB', { 
+              <div className="flex justify-center">
+                <MagicalButton onClick={goBack} variant="outline">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  {currentLanguage === 'pt' ? 'Voltar' : currentLanguage === 'es' ? 'Volver' : currentLanguage === 'fr' ? 'Retour' : 'Back'}
+                </MagicalButton>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Step 3: Contact Information */}
+        {currentStep === 3 && (
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white rounded-3xl p-8 shadow-xl">
+              <div className="text-center mb-8">
+                <div className="inline-block bg-purple-100 rounded-full p-4 mb-4">
+                  <Send className="w-8 h-8 text-purple-600" />
+                </div>
+                <div className="bg-orange-50 rounded-2xl p-4 mb-6">
+                  <p className="soft-text text-orange-800 font-semibold">
+                    📅 {selectedDate?.date.toLocaleDateString(currentLanguage === 'pt' ? 'pt-PT' : currentLanguage === 'es' ? 'es-ES' : currentLanguage === 'fr' ? 'fr-FR' : 'en-GB', { 
                       weekday: 'long', 
                       year: 'numeric', 
                       month: 'long', 
                       day: 'numeric' 
                     })}
                   </p>
+                  <p className="soft-text text-orange-600 text-sm">
+                    {serviceOptions.find(s => s.id === selectedService)?.title}
+                  </p>
                 </div>
-              )}
-            </div>
-
-            {/* Contact Form */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <h2 className="text-3xl font-bold mb-6">
-                <GradientText>Send a Message</GradientText>
-              </h2>
+              </div>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -344,19 +336,20 @@ const ContactPage = ({ currentLanguage }) => {
                     />
                   </div>
                   <div>
-                    <label className="bubble-text block text-sm font-semibold text-gray-700 mb-2">{t.contact.form.service}</label>
-                    <select
-                      name="service"
-                      value={formData.service}
+                    <label className="bubble-text block text-sm font-semibold text-gray-700 mb-2">
+                      {selectedService === 'babysitting' 
+                        ? (currentLanguage === 'pt' ? 'Número de Crianças' : currentLanguage === 'es' ? 'Número de Niños' : currentLanguage === 'fr' ? 'Nombre d\'Enfants' : 'Number of Children')
+                        : (currentLanguage === 'pt' ? 'Duração Preferida' : currentLanguage === 'es' ? 'Duración Preferida' : currentLanguage === 'fr' ? 'Durée Préférée' : 'Preferred Duration')
+                      }
+                    </label>
+                    <input
+                      type="text"
+                      name={selectedService === 'babysitting' ? 'children' : 'duration'}
+                      value={selectedService === 'babysitting' ? formData.children : formData.duration}
                       onChange={handleInputChange}
+                      placeholder={selectedService === 'babysitting' ? '1-8' : '1-4 hours'}
                       className="soft-text w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
-                    >
-                      <option value="">{t.contact.form.services.select}</option>
-                      <option value="babysitting">{t.contact.form.services.babysitting}</option>
-                      <option value="birthday-party">{t.contact.form.services.birthday}</option>
-                      <option value="skate-lessons">{t.contact.form.services.skate}</option>
-                      <option value="other">{t.contact.form.services.other}</option>
-                    </select>
+                    />
                   </div>
                 </div>
 
@@ -373,31 +366,75 @@ const ContactPage = ({ currentLanguage }) => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <MagicalButton type="submit" className="flex-1">
-                    <Send className="w-4 h-4 mr-2" />
-                    {t.contact.form.send}
+                  <MagicalButton onClick={goBack} variant="outline" className="flex-1">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    {currentLanguage === 'pt' ? 'Voltar' : currentLanguage === 'es' ? 'Volver' : currentLanguage === 'fr' ? 'Retour' : 'Back'}
                   </MagicalButton>
                   
-                  <MagicalButton
-                    type="button"
-                    onClick={handleWhatsApp}
-                    variant="secondary"
-                    className="flex-1"
-                  >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    {t.contact.form.whatsappInstead}
+                  <MagicalButton type="submit" className="flex-1">
+                    <Send className="w-4 h-4 mr-2" />
+                    {currentLanguage === 'pt' ? 'Confirmar Reserva' : currentLanguage === 'es' ? 'Confirmar Reserva' : currentLanguage === 'fr' ? 'Confirmer Réservation' : 'Confirm Booking'}
                   </MagicalButton>
                 </div>
               </form>
-
-              <div className="mt-6 p-4 bg-green-50 rounded-2xl border-2 border-green-200">
-                <p className="soft-text text-green-800 text-sm text-center">
-                  💚 <strong>{t.contact.form.tip}</strong>
-                </p>
-              </div>
             </div>
           </div>
-        </div>
+        )}
+
+        {/* Step 4: Confirmation */}
+        {currentStep === 4 && (
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-white rounded-3xl p-12 shadow-xl">
+              <div className="text-8xl mb-6 animate-gentle-pulse">🎉</div>
+              <div className="text-6xl text-green-500 mb-6">
+                <CheckCircle className="w-16 h-16 mx-auto" />
+              </div>
+              
+              <h3 className="bubble-text text-3xl font-bold text-gray-800 mb-4">
+                {currentLanguage === 'pt' ? 'Reserva Enviada!' 
+                  : currentLanguage === 'es' ? '¡Reserva Enviada!' 
+                  : currentLanguage === 'fr' ? 'Réservation Envoyée!'
+                  : 'Booking Sent!'}
+              </h3>
+              
+              <div className="bg-green-50 rounded-2xl p-6 mb-8">
+                <p className="soft-text text-green-800 mb-4">
+                  <strong>{formData.name}</strong>, {currentLanguage === 'pt' ? 'a sua reserva foi enviada para Ted via WhatsApp!' 
+                    : currentLanguage === 'es' ? '¡tu reserva ha sido enviada a Ted vía WhatsApp!' 
+                    : currentLanguage === 'fr' ? 'votre réservation a été envoyée à Ted via WhatsApp!'
+                    : 'your booking has been sent to Ted via WhatsApp!'}
+                </p>
+                <div className="text-sm text-green-600 space-y-1">
+                  <p>📅 <strong>{selectedDate?.date.toLocaleDateString()}</strong></p>
+                  <p>🎯 <strong>{serviceOptions.find(s => s.id === selectedService)?.title}</strong></p>
+                  <p>📱 <strong>{formData.phone}</strong></p>
+                </div>
+              </div>
+              
+              <p className="soft-text text-gray-600 mb-8">
+                {currentLanguage === 'pt' ? 'Ted entrará em contacto consigo em breve para confirmar todos os detalhes!'
+                  : currentLanguage === 'es' ? '¡Ted se pondrá en contacto contigo pronto para confirmar todos los detalles!'
+                  : currentLanguage === 'fr' ? 'Ted vous contactera bientôt pour confirmer tous les détails!'
+                  : 'Ted will contact you soon to confirm all the details!'}
+              </p>
+              
+              <MagicalButton 
+                onClick={() => {
+                  setCurrentStep(1);
+                  setSelectedService('');
+                  setSelectedDate(null);
+                  setFormData({ name: '', email: '', phone: '', message: '', children: '', duration: '' });
+                }}
+                className="mb-4"
+              >
+                {currentLanguage === 'pt' ? 'Nova Reserva' 
+                  : currentLanguage === 'es' ? 'Nueva Reserva' 
+                  : currentLanguage === 'fr' ? 'Nouvelle Réservation'
+                  : 'New Booking'}
+              </MagicalButton>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
