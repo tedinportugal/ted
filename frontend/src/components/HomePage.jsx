@@ -129,11 +129,11 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     
-                    <h3 className="text-2xl font-bold mb-4 text-gray-800 group-hover:text-orange-600 transition-colors">
+                    <h3 className="bubble-text text-2xl font-bold mb-4 text-gray-800 group-hover:text-orange-600 transition-colors">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="soft-text text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
 
