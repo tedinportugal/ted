@@ -36,8 +36,8 @@ const Header = ({ currentLanguage, setCurrentLanguage, currentPage, setCurrentPa
           >
             <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-orange-400 shadow-lg mr-3">
               <img
-                src={tedLogoUrl}
-                alt="Ted Logo"
+                src={tedRealPhoto}
+                alt="Ted - Professional Photo"
                 className="w-full h-full object-cover"
               />
             </div>
