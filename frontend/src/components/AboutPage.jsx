@@ -209,17 +209,17 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
 
             <div className="relative">
               <div className="bg-gradient-to-br from-orange-200 to-teal-200 rounded-3xl p-8 text-center shadow-2xl">
-                <div className="text-8xl mb-6 animate-bounce">🏆</div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Certified Professional</h3>
-                <p className="text-gray-600 mb-6">
-                  Ted brings professional training and genuine passion together to create unforgettable experiences for children.
+                <div className="text-8xl mb-6 animate-gentle-pulse">🏆</div>
+                <h3 className="bubble-text text-2xl font-bold text-gray-800 mb-4">{t.about.certified}</h3>
+                <p className="soft-text text-gray-600 mb-6">
+                  {t.about.certifiedDesc}
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <div className="text-2xl animate-pulse">⭐</div>
-                  <div className="text-2xl animate-pulse" style={{ animationDelay: '0.5s' }}>⭐</div>
-                  <div className="text-2xl animate-pulse" style={{ animationDelay: '1s' }}>⭐</div>
-                  <div className="text-2xl animate-pulse" style={{ animationDelay: '1.5s' }}>⭐</div>
-                  <div className="text-2xl animate-pulse" style={{ animationDelay: '2s' }}>⭐</div>
+                  <div className="text-2xl animate-gentle-pulse">⭐</div>
+                  <div className="text-2xl animate-gentle-pulse" style={{ animationDelay: '0.5s' }}>⭐</div>
+                  <div className="text-2xl animate-gentle-pulse" style={{ animationDelay: '1s' }}>⭐</div>
+                  <div className="text-2xl animate-gentle-pulse" style={{ animationDelay: '1.5s' }}>⭐</div>
+                  <div className="text-2xl animate-gentle-pulse" style={{ animationDelay: '2s' }}>⭐</div>
                 </div>
               </div>
             </div>
