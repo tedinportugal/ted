@@ -292,11 +292,11 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-400 to-teal-400">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6 animate-pulse">
-            Ready for Some Magic?
+          <h2 className="bubble-text text-4xl font-bold text-white mb-6 animate-gentle-pulse">
+            {t.hero.ctaTitle || "Ready for Some Magic?"}
           </h2>
-          <p className="text-xl text-orange-100 mb-8">
-            Book Ted today and create unforgettable memories for your children!
+          <p className="soft-text text-xl text-orange-100 mb-8">
+            {t.hero.ctaSubtitle || "Book Ted today and create unforgettable memories for your children!"}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -305,7 +305,7 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
               className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-4"
             >
               <Users className="w-5 h-5 mr-2" />
-              Get Started Now
+              {t.common.getStarted}
             </MagicalButton>
           </div>
         </div>
