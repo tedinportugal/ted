@@ -1045,11 +1045,14 @@ export const languages = {
     about: {
       title: "¡Conoce a Ted!",
       subtitle: "Creando momentos mágicos por todo Portugal",
+      bio: "¡Hola! Soy Ted, tengo 23 años y vine de Brasil para ser animador en Portugal. Soy un animador por amor y profesor de skate apasionado. Con certificaciones en TEA y S21, traigo creatividad, energía y cuidado genuino a cada interacción con niños. Amo los abrazos y creo que los niños deben jugar y crear recuerdos en lugar de pasar todo el día en sus teléfonos. ¡Mi objetivo es crear momentos mágicos que los niños recordarán para siempre!",
       stats: {
+        title: "Ted en Números",
         happyKids: "Niños Felices",
         avgRating: "Calificación Promedio", 
         experience: "Años de Experiencia",
-        parties: "Fiestas Organizadas"
+        parties: "Fiestas Organizadas",
+        languages: "Idiomas"
       },
       languages: {
         title: "Idiomas Hablados",
