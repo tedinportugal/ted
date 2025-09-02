@@ -156,7 +156,7 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
                       className="w-full"
                       variant="secondary"
                     >
-                      Learn More
+                      {t.common.learnMore}
                     </MagicalButton>
                   </div>
                 </div>
