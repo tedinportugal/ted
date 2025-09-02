@@ -136,10 +136,10 @@ export const ConfettiEffect = ({ active = false }) => {
   );
 };
 
-// Bubble-like gradient text
+// Bubble-like gradient text with subtle pink-to-blue gradient
 export const GradientText = ({ children, className = "" }) => {
   return (
-    <span className={`bubble-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent ${className}`}>
+    <span className={`bubble-text bg-gradient-to-r from-pink-500 to-blue-600 bg-clip-text text-transparent ${className}`}>
       {children}
     </span>
   );
