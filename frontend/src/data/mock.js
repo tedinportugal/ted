@@ -131,9 +131,10 @@ export const mockData = {
 
   contact: {
     whatsapp: "+351936331843",
-    email: "ted@tedinportugal.com",
+    email: "hello@tedinportugal.com",
     phone: "+351936331843",
     instagram: "@tedinportugal",
+    website: "www.tedinportugal.com",
     location: "Faro, Portugal & surrounding areas"
   },
 
