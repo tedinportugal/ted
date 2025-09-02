@@ -30,7 +30,7 @@ const BabysittingPage = ({ currentLanguage, setCurrentPage }) => {
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full mb-6 animate-bounce">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-400 to-blue-500 rounded-full mb-6 animate-gentle-pulse">
               <Heart className="w-10 h-10 text-white fill-current" />
             </div>
             
