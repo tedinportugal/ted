@@ -321,7 +321,7 @@ const ContactPage = ({ currentLanguage }) => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <MagicalButton type="submit" className="flex-1">
                     <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    {t.contact.form.send}
                   </MagicalButton>
                   
                   <MagicalButton
@@ -331,14 +331,14 @@ const ContactPage = ({ currentLanguage }) => {
                     className="flex-1"
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    WhatsApp Instead
+                    {t.contact.form.whatsappInstead}
                   </MagicalButton>
                 </div>
               </form>
 
               <div className="mt-6 p-4 bg-green-50 rounded-2xl border-2 border-green-200">
-                <p className="text-green-800 text-sm text-center">
-                  💚 <strong>Quick Response Tip:</strong> For fastest response, use WhatsApp! Ted usually replies within minutes.
+                <p className="soft-text text-green-800 text-sm text-center">
+                  💚 <strong>{t.contact.form.tip}</strong>
                 </p>
               </div>
             </div>
