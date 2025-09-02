@@ -269,31 +269,53 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="bubble-text text-4xl font-bold mb-4">
-              <GradientText>{t.about.testimonials || "What Families Say"}</GradientText>
+              <GradientText>{t.common.testimonials || "What Families Say"}</GradientText>
             </h2>
-            <p className="soft-text text-xl text-gray-600">{t.about.testimonialsSub || "Real stories from happy families"}</p>
+            <p className="soft-text text-xl text-gray-600">{t.common.testimonialsSub || "Real stories from happy families"}</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {mockData.testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-orange-400"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              {mockData.testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-orange-400"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  
+                  <p className="soft-text text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                  
+                  <div className="border-t pt-4">
+                    <div className="bubble-text font-semibold text-gray-800">{testimonial.name}</div>
+                    <div className="soft-text text-sm text-orange-600">{testimonial.service}</div>
+                  </div>
                 </div>
-                
-                <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                
-                <div className="border-t pt-4">
-                  <div className="font-semibold text-gray-800">{testimonial.name}</div>
-                  <div className="text-sm text-orange-600">{testimonial.service}</div>
+              ))}
+            </div>
+
+            <div className="relative">
+              <div className="w-full max-w-md mx-auto">
+                <div className="relative">
+                  <div className="w-80 h-80 rounded-3xl overflow-hidden border-8 border-white shadow-2xl mx-auto">
+                    <img
+                      src={tedRealPhoto}
+                      alt="Ted - Happy with Families"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Fixed decorative elements around Ted's photo */}
+                  <div className="absolute -top-4 -right-4 text-4xl">💬</div>
+                  <div className="absolute -bottom-4 -left-4 text-4xl">⭐</div>
+                  <div className="absolute top-1/2 -left-8 text-3xl animate-glow">😊</div>
+                  <div className="absolute bottom-1/4 -right-8 text-3xl">👨‍👩‍👧‍👦</div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
