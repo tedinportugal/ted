@@ -1,21 +1,51 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MessageCircle, Instagram, MapPin, Calendar, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Instagram, MapPin, Calendar, Clock, Send, ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react';
 import { mockData, languages } from '../data/mock';
 import { MagicalButton, GradientText } from './MagicalElements';
 
 const ContactPage = ({ currentLanguage }) => {
+  const [currentStep, setCurrentStep] = useState(1);
+  const [selectedService, setSelectedService] = useState('');
   const [selectedDate, setSelectedDate] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: '',
     message: '',
-    date: ''
+    children: '',
+    duration: ''
   });
   
   const contact = mockData.contact;
   const t = languages[currentLanguage];
+
+  // Service options for booking
+  const serviceOptions = [
+    {
+      id: 'babysitting',
+      title: t.services.babysitting.title,
+      description: t.services.babysitting.description,
+      price: currentLanguage === 'pt' ? 'A partir de 30€/hora' : currentLanguage === 'es' ? 'Desde 30€/hora' : currentLanguage === 'fr' ? 'À partir de 30€/heure' : 'From 30€/hour',
+      icon: '👶',
+      color: 'from-pink-400 to-pink-600'
+    },
+    {
+      id: 'birthdays',
+      title: t.services.birthdays.title,
+      description: t.services.birthdays.description,
+      price: currentLanguage === 'pt' ? 'A partir de 120€/festa' : currentLanguage === 'es' ? 'Desde 120€/fiesta' : currentLanguage === 'fr' ? 'À partir de 120€/fête' : 'From 120€/party',
+      icon: '🎉',
+      color: 'from-purple-400 to-purple-600'
+    },
+    {
+      id: 'skate',
+      title: t.services.skate.title,
+      description: t.services.skate.description,
+      price: currentLanguage === 'pt' ? 'A partir de 25€/aula' : currentLanguage === 'es' ? 'Desde 25€/clase' : currentLanguage === 'fr' ? 'À partir de 25€/cours' : 'From 25€/lesson',
+      icon: '🛹',
+      color: 'from-blue-400 to-blue-600'
+    }
+  ];
 
   // Generate mock calendar for next 30 days with translated day names
   const generateCalendar = () => {
@@ -48,10 +78,15 @@ const ContactPage = ({ currentLanguage }) => {
 
   const calendarDays = generateCalendar();
 
+  const handleServiceSelect = (serviceId) => {
+    setSelectedService(serviceId);
+    setCurrentStep(2);
+  };
+
   const handleDateSelect = (day) => {
     if (day.available) {
       setSelectedDate(day);
-      setFormData(prev => ({ ...prev, date: day.dateString }));
+      setCurrentStep(3);
     }
   };
 
@@ -64,13 +99,32 @@ const ContactPage = ({ currentLanguage }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock form submission
-    alert(t.contact.form.thankYou || 'Thank you! Ted will contact you soon. For immediate response, please use WhatsApp.');
+    setCurrentStep(4);
+    
+    // Mock booking confirmation
+    setTimeout(() => {
+      const selectedServiceData = serviceOptions.find(s => s.id === selectedService);
+      const message = encodeURIComponent(
+        `${t.contact.form.whatsappMessage || `Hi Ted! I'd like to book ${selectedServiceData?.title} for ${selectedDate?.date.toLocaleDateString()}. My details: ${formData.name}, ${formData.email}, ${formData.phone}. ${formData.message ? `Additional info: ${formData.message}` : ''}`}`
+      );
+      window.open(`https://wa.me/${contact.whatsapp.replace('+', '')}?text=${message}`, '_blank');
+    }, 2000);
   };
 
-  const handleWhatsApp = () => {
-    const message = encodeURIComponent(`${t.contact.form.whatsappMessage || `Hi Ted! I'm interested in ${formData.service || 'your services'}. ${selectedDate ? `I'm looking at ${selectedDate.date.toLocaleDateString()}. ` : ''}Can we chat?`}`);
-    window.open(`https://wa.me/${contact.whatsapp.replace('+', '')}?text=${message}`, '_blank');
+  const goBack = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const getStepTitle = () => {
+    switch (currentStep) {
+      case 1: return currentLanguage === 'pt' ? 'Escolha o Seu Serviço' : currentLanguage === 'es' ? 'Elige Tu Servicio' : currentLanguage === 'fr' ? 'Choisissez Votre Service' : 'Choose Your Service';
+      case 2: return t.contact.availability.title;
+      case 3: return currentLanguage === 'pt' ? 'Suas Informações' : currentLanguage === 'es' ? 'Tu Información' : currentLanguage === 'fr' ? 'Vos Informations' : 'Your Information';
+      case 4: return currentLanguage === 'pt' ? 'Reserva Confirmada!' : currentLanguage === 'es' ? '¡Reserva Confirmada!' : currentLanguage === 'fr' ? 'Réservation Confirmée!' : 'Booking Confirmed!';
+      default: return '';
+    }
   };
 
   const handleInstagram = () => {
