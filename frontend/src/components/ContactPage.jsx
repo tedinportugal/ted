@@ -255,66 +255,66 @@ const ContactPage = ({ currentLanguage }) => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
+                    <label className="bubble-text block text-sm font-semibold text-gray-700 mb-2">{t.contact.form.name} *</label>
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
+                      className="soft-text w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                    <label className="bubble-text block text-sm font-semibold text-gray-700 mb-2">{t.contact.form.email} *</label>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
+                      className="soft-text w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
+                    <label className="bubble-text block text-sm font-semibold text-gray-700 mb-2">{t.contact.form.phone}</label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
+                      className="soft-text w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Service Interested</label>
+                    <label className="bubble-text block text-sm font-semibold text-gray-700 mb-2">{t.contact.form.service}</label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
+                      className="soft-text w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors"
                     >
-                      <option value="">Select a service</option>
-                      <option value="babysitting">Babysitting</option>
-                      <option value="birthday-party">Birthday Party</option>
-                      <option value="skate-lessons">Skate Lessons</option>
-                      <option value="other">Other</option>
+                      <option value="">{t.contact.form.services.select}</option>
+                      <option value="babysitting">{t.contact.form.services.babysitting}</option>
+                      <option value="birthday-party">{t.contact.form.services.birthday}</option>
+                      <option value="skate-lessons">{t.contact.form.services.skate}</option>
+                      <option value="other">{t.contact.form.services.other}</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                  <label className="bubble-text block text-sm font-semibold text-gray-700 mb-2">{t.contact.form.message}</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors resize-none"
-                    placeholder="Tell Ted about your needs, number of children, special requests, etc."
+                    className="soft-text w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none transition-colors resize-none"
+                    placeholder={t.contact.form.placeholder}
                   ></textarea>
                 </div>
 
