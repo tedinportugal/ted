@@ -80,16 +80,16 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 text-center">
               <div className="flex flex-col items-center">
-                <div className="text-3xl font-bold text-orange-600">500+</div>
-                <div className="text-gray-600">Happy Kids</div>
+                <div className="text-3xl font-bold text-orange-600">{t.common.happyKids}</div>
+                <div className="soft-text text-gray-600">{t.about.stats.happyKids}</div>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-3xl font-bold text-teal-600">5★</div>
-                <div className="text-gray-600">Average Rating</div>
+                <div className="text-3xl font-bold text-teal-600">{t.common.rating}</div>
+                <div className="soft-text text-gray-600">{t.about.stats.avgRating}</div>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-3xl font-bold text-purple-600">3+</div>
-                <div className="text-gray-600">Years Experience</div>
+                <div className="text-3xl font-bold text-purple-600">{t.common.yearsExp}</div>
+                <div className="soft-text text-gray-600">{t.about.stats.experience}</div>
               </div>
             </div>
           </div>
