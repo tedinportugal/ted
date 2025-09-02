@@ -455,7 +455,51 @@ export const languages = {
       happyKids: "500+",
       rating: "5★",
       yearsExp: "3+",
-      from: "A partir de"
+      from: "A partir de",
+      selected: "Selecionado",
+      chooseTheme: "Escolher Este Tema",
+      choosePackage: "Escolher Pacote",
+      chooseLevel: "Escolher Nível",
+      whatIncluded: "O Que Está Incluído",
+      testimonials: "O Que as Famílias Dizem",
+      testimonialsSub: "Histórias reais de famílias felizes",
+      readyForMagic: "Prontos para um Pouco de Magia?",
+      bookToday: "Reserve Ted hoje e crie memórias inesquecíveis para as suas crianças!",
+      // System texts
+      loading: "A carregar...",
+      error: "Erro",
+      success: "Sucesso",
+      required: "Obrigatório",
+      optional: "Opcional",
+      submit: "Submeter",
+      cancel: "Cancelar",
+      close: "Fechar",
+      next: "Próximo",
+      previous: "Anterior",
+      // Date/Time
+      days: {
+        monday: "Segunda",
+        tuesday: "Terça", 
+        wednesday: "Quarta",
+        thursday: "Quinta",
+        friday: "Sexta",
+        saturday: "Sábado",
+        sunday: "Domingo"
+      },
+      months: {
+        january: "Janeiro",
+        february: "Fevereiro",
+        march: "Março",
+        april: "Abril", 
+        may: "Maio",
+        june: "Junho",
+        july: "Julho",
+        august: "Agosto",
+        september: "Setembro",
+        october: "Outubro",
+        november: "Novembro", 
+        december: "Dezembro"
+      }
     }
   },
   en: {
