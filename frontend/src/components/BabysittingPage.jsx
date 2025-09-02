@@ -152,30 +152,52 @@ const BabysittingPage = ({ currentLanguage, setCurrentPage }) => {
         </div>
       </section>
 
-      {/* Features & Activities */}
+      {/* What's Included with Ted's Photo */}
       <section className="py-16 bg-gradient-to-r from-purple-100 to-pink-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              <GradientText>What's Included</GradientText>
-            </h2>
-            <p className="text-xl text-gray-600">Every babysitting session includes these amazing activities</p>
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="bubble-text text-4xl font-bold mb-4">
+                <GradientText>{t.services.babysitting.workshops || "What's Included"}</GradientText>
+              </h2>
+              <p className="soft-text text-xl text-gray-600 mb-8">{t.services.babysitting.subtitle || "Every babysitting session includes these amazing activities"}</p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {service.features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mr-4">
-                    <Sparkles className="w-6 h-6 text-white" />
+              <div className="grid md:grid-cols-1 gap-6">
+                {t.services.babysitting.features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                        <Sparkles className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="bubble-text text-lg font-semibold text-gray-800">{feature}</h3>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800">{feature}</h3>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="w-full max-w-md mx-auto">
+                <div className="relative">
+                  <div className="w-80 h-80 rounded-3xl overflow-hidden border-8 border-white shadow-2xl mx-auto">
+                    <img
+                      src={tedRealPhoto}
+                      alt="Ted - Your Babysitter"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Fixed decorative elements around Ted's photo */}
+                  <div className="absolute -top-4 -right-4 text-4xl">🎈</div>
+                  <div className="absolute -bottom-4 -left-4 text-4xl">⭐</div>
+                  <div className="absolute top-1/2 -left-8 text-3xl animate-glow">❤️</div>
+                  <div className="absolute bottom-1/4 -right-8 text-3xl">🧸</div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
