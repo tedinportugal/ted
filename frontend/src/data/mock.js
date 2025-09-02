@@ -712,11 +712,13 @@ export const languages = {
     about: {
       title: "Meet Ted!",
       subtitle: "Creating magical moments across Portugal",
+      bio: "Hi! I'm Ted, a passionate children's entertainer and educator based in Portugal. With certifications in TEA and S21, I bring creativity, energy, and genuine care to every interaction with children. Whether it's babysitting, throwing an amazing birthday party, or teaching skateboarding, my goal is to create magical moments that children will remember forever!",
       stats: {
         happyKids: "Happy Children",
         avgRating: "Average Rating", 
         experience: "Years Experience",
-        parties: "Parties Organized"
+        parties: "Parties Organized",
+        languages: "Languages"
       },
       languages: {
         title: "Languages Spoken",
@@ -726,22 +728,31 @@ export const languages = {
         title: "Ted's Specialties",
         subtitle: "What makes Ted special in children's entertainment",
         creative: "Creative Activities",
+        creativeDesc: "Arts, crafts, and imaginative play",
         educational: "Educational Games",
+        educationalDesc: "Learning through fun and interaction",
         outdoor: "Outdoor Adventures",
-        arts: "Arts & Crafts"
+        outdoorDesc: "Safe exploration and active play",
+        arts: "Arts & Crafts",
+        artsDesc: "Hands-on creative projects"
       },
       experience: {
         title: "Experience & Qualifications",
         certifications: "Professional Certifications",
-        experienceDesc: "Extensive experience working with children of all ages",
-        passion: "Passion for Children"
+        certificationsDesc: "TEA and S21 certified, ensuring the highest standards in children's care and entertainment.",
+        experienceTitle: "Professional Experience",
+        experienceDesc: "Extensive experience working with children of all ages, creating safe and engaging environments.",
+        passion: "Passion for Children",
+        passionDesc: "Genuine love for working with children, creating magical moments that inspire creativity and joy."
       },
       cta: {
         title: "Ready to Meet Ted?",
         subtitle: "Let's create magical memories for your children together!",
         contact: "Contact Ted",
         services: "Explore Services"
-      }
+      },
+      certified: "Certified Professional",
+      certifiedDesc: "Ted brings professional training and genuine passion together to create unforgettable experiences for children."
     },
     contact: {
       title: "Get in Touch",
