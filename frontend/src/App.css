@@ -29,20 +29,21 @@
     animation: rainbow 6s ease infinite;
 }
 
-/* Magical gradient backgrounds */
+/* Magical gradient backgrounds - subtle pink to blue */
 .magic-gradient {
-    background: linear-gradient(-45deg, #ff6b35, #f7931e, #20b2aa, #6a5acd);
+    background: linear-gradient(-45deg, #ec4899, #3b82f6, #8b5cf6, #06b6d4);
     background-size: 400% 400%;
     animation: rainbow 6s ease infinite;
 }
 
 /* Rounded, bubble-like typography */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700;800;900&display=swap');
 
 /* Main headings - bubble-like and playful */
 h1, h2, h3 {
     font-family: 'Fredoka One', cursive;
     letter-spacing: 0.5px;
+    font-weight: 400;
 }
 
 /* Body text and UI elements - rounded and readable */
@@ -54,13 +55,34 @@ body, p, span, button, input, select, textarea, div {
 /* Make all text more rounded and soft */
 .bubble-text {
     font-family: 'Fredoka One', cursive;
+    font-weight: 400;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
 }
 
 .soft-text {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     line-height: 1.6;
+}
+
+/* Solid color alternatives for bubble text */
+.bubble-pink {
+    font-family: 'Fredoka One', cursive;
+    color: #ec4899;
+    text-shadow: 2px 2px 4px rgba(236, 72, 153, 0.2);
+}
+
+.bubble-blue {
+    font-family: 'Fredoka One', cursive;
+    color: #3b82f6;
+    text-shadow: 2px 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.bubble-purple {
+    font-family: 'Fredoka One', cursive;
+    color: #8b5cf6;
+    text-shadow: 2px 2px 4px rgba(139, 92, 246, 0.2);
 }
 
 /* Custom scrollbar */
