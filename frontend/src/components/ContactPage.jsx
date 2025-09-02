@@ -190,8 +190,8 @@ const ContactPage = ({ currentLanguage }) => {
               </h2>
               
               <div className="grid grid-cols-7 gap-2 mb-4">
-                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-                  <div key={day} className="text-center font-semibold text-gray-600 py-2">
+                {t.contact.calendar.days.map(day => (
+                  <div key={day} className="bubble-text text-center font-semibold text-gray-600 py-2">
                     {day}
                   </div>
                 ))}
