@@ -767,6 +767,7 @@ export const languages = {
       subtitle: "Creating magical moments across Portugal",
       bio: "Hi! I'm Ted, I'm 23 years old and I came from Brazil to be an entertainer in Portugal. I'm an entertainer by love and a passionate skate teacher. With certifications in TEA and S21, I bring creativity, energy, and genuine care to every interaction with children. I love hugs and believe children should play and create memories instead of spending all day on their phones. My goal is to create magical moments that children will remember forever!",
       stats: {
+        title: "Ted by the Numbers",
         happyKids: "Happy Children",
         avgRating: "Average Rating", 
         experience: "Years Experience",
