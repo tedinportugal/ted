@@ -132,7 +132,7 @@ const SkatePage = ({ currentLanguage, setCurrentPage }) => {
                     className="w-full"
                     variant={selectedLevel === index ? "primary" : "outline"}
                   >
-                    {selectedLevel === index ? "Selected! 🛹" : "Choose Level"}
+                    {selectedLevel === index ? (t.common.selectedTheme || "Selected! 🛹") : (t.common.chooseLevel || "Choose Level")}
                   </MagicalButton>
                 </div>
               </div>
