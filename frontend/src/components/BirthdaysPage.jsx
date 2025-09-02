@@ -186,7 +186,7 @@ const BirthdaysPage = ({ currentLanguage, setCurrentPage }) => {
                     className="w-full"
                     variant={pkg.popular ? "primary" : "secondary"}
                   >
-                    Choose Package
+                    {t.common.choosePackage || "Choose Package"}
                   </MagicalButton>
                 </div>
               </div>
