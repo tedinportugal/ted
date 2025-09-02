@@ -106,10 +106,10 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="bubble-text text-4xl md:text-5xl font-bold mb-4">
-              <GradientText>Magical Services</GradientText>
+              <GradientText>{t.services.title}</GradientText>
             </h2>
             <p className="soft-text text-xl text-gray-600 max-w-2xl mx-auto">
-              From babysitting adventures to birthday party magic and skate lessons - Ted makes every moment special!
+              {t.services.subtitle}
             </p>
           </div>
 
