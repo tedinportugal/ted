@@ -371,11 +371,13 @@ export const languages = {
     about: {
       title: "Conhece Ted!",
       subtitle: "Criando momentos mágicos por todo Portugal",
+      bio: "Olá! Sou Ted, um animador infantil e educador apaixonado baseado em Portugal. Com certificações em TEA e S21, trago criatividade, energia e cuidado genuíno a cada interação com crianças. Seja babysitting, organizando uma festa de aniversário incrível, ou ensinando skate, o meu objetivo é criar momentos mágicos que as crianças lembrarão para sempre!",
       stats: {
         happyKids: "Crianças Felizes",
         avgRating: "Avaliação Média", 
         experience: "Anos de Experiência",
-        parties: "Festas Organizadas"
+        parties: "Festas Organizadas",
+        languages: "Idiomas"
       },
       languages: {
         title: "Idiomas Falados",
@@ -385,22 +387,31 @@ export const languages = {
         title: "Especialidades do Ted",
         subtitle: "O que torna Ted especial no entretenimento infantil",
         creative: "Atividades Criativas",
+        creativeDesc: "Artes, ofícios e brincadeiras imaginativas",
         educational: "Jogos Educativos",
+        educationalDesc: "Aprendizagem através de diversão e interação",
         outdoor: "Aventuras ao Ar Livre",
-        arts: "Artes e Ofícios"
+        outdoorDesc: "Exploração segura e brincadeiras ativas",
+        arts: "Artes e Ofícios",
+        artsDesc: "Projetos criativos práticos"
       },
       experience: {
         title: "Experiência e Qualificações",
         certifications: "Certificações Profissionais",
-        experienceDesc: "Vasta experiência trabalhando com crianças de todas as idades",
-        passion: "Paixão pelas Crianças"
+        certificationsDesc: "TEA e S21 certificado, garantindo os mais altos padrões no cuidado e entretenimento infantil.",
+        experienceTitle: "Experiência Profissional",
+        experienceDesc: "Vasta experiência trabalhando com crianças de todas as idades, criando ambientes seguros e envolventes.",
+        passion: "Paixão pelas Crianças",
+        passionDesc: "Amor genuíno por trabalhar com crianças, criando momentos mágicos que inspiram criatividade e alegria."
       },
       cta: {
         title: "Pronto para Conhecer Ted?",
         subtitle: "Vamos criar memórias mágicas para as suas crianças juntos!",
         contact: "Contactar Ted",
         services: "Explorar Serviços"
-      }
+      },
+      certified: "Profissional Certificado",
+      certifiedDesc: "Ted traz formação profissional e paixão genuína juntas para criar experiências inesquecíveis para crianças."
     },
     contact: {
       title: "Entre em Contacto",
