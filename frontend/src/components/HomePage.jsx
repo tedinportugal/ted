@@ -14,6 +14,55 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Create service data with proper translations
+  const getServiceFeatures = (serviceKey, currentLang) => {
+    const translations = {
+      babysitting: {
+        pt: ['Atividades criativas', 'Seguro e divertido', 'Todas as idades'],
+        en: ['Creative activities', 'Safe & fun', 'All ages'],
+        es: ['Actividades creativas', 'Seguro y divertido', 'Todas las edades'],
+        fr: ['Activités créatives', 'Sûr et amusant', 'Tous âges']
+      },
+      birthdays: {
+        pt: ['Festas temáticas', 'Decorações incluídas', 'Momentos mágicos'],
+        en: ['Themed parties', 'Decorations included', 'Magical moments'],
+        es: ['Fiestas temáticas', 'Decoraciones incluidas', 'Momentos mágicos'],
+        fr: ['Fêtes thématiques', 'Décorations incluses', 'Moments magiques']
+      },
+      skate: {
+        pt: ['Todos os níveis', 'Equipamento incluído', 'Segurança primeiro'],
+        en: ['All skill levels', 'Equipment included', 'Safety first'],
+        es: ['Todos los niveles', 'Equipo incluido', 'Seguridad primero'],
+        fr: ['Tous niveaux', 'Équipement inclus', 'Sécurité d\'abord']
+      }
+    };
+    return translations[serviceKey][currentLang] || translations[serviceKey]['en'];
+  };
+
+  const getServicePrices = (serviceKey, currentLang) => {
+    const priceTranslations = {
+      babysitting: {
+        pt: `${t.common.from} 30€/hora`,
+        en: `${t.common.from} 30€/hour`, 
+        es: `${t.common.from} 30€/hora`,
+        fr: `${t.common.from} 30€/heure`
+      },
+      birthdays: {
+        pt: `${t.common.from} 120€/festa`,
+        en: `${t.common.from} 120€/party`,
+        es: `${t.common.from} 120€/fiesta`, 
+        fr: `${t.common.from} 120€/fête`
+      },
+      skate: {
+        pt: `${t.common.from} 25€/aula`,
+        en: `${t.common.from} 25€/lesson`,
+        es: `${t.common.from} 25€/clase`,
+        fr: `${t.common.from} 25€/cours`
+      }
+    };
+    return priceTranslations[serviceKey][currentLang] || priceTranslations[serviceKey]['en'];
+  };
+
   const services = [
     {
       key: 'babysitting',
@@ -21,8 +70,8 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
       description: t.services.babysitting.description,
       icon: Heart,
       color: 'from-pink-400 to-pink-600',
-      price: `${t.common.from} 30€/hora`,
-      features: [t.services.babysitting.features[0], t.services.babysitting.features[4], 'Todas as idades']
+      price: getServicePrices('babysitting', currentLanguage),
+      features: getServiceFeatures('babysitting', currentLanguage)
     },
     {
       key: 'birthdays',
@@ -30,8 +79,8 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
       description: t.services.birthdays.description,
       icon: Star,
       color: 'from-purple-400 to-purple-600',
-      price: `${t.common.from} 120€/festa`,
-      features: ['Festas temáticas', 'Decorações incluídas', 'Momentos mágicos']
+      price: getServicePrices('birthdays', currentLanguage),
+      features: getServiceFeatures('birthdays', currentLanguage)
     },
     {
       key: 'skate',
@@ -39,8 +88,8 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
       description: t.services.skate.description,
       icon: Zap,
       color: 'from-blue-400 to-blue-600',
-      price: `${t.common.from} 25€/aula`,
-      features: ['Todos os níveis', 'Equipamento incluído', 'Segurança primeiro']
+      price: getServicePrices('skate', currentLanguage),
+      features: getServiceFeatures('skate', currentLanguage)
     }
   ];
 
