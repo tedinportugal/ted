@@ -113,10 +113,10 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
       <section className="py-16 bg-gradient-to-r from-orange-100 to-teal-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Languages Spoken</GradientText>
+            <h2 className="bubble-text text-4xl font-bold mb-4">
+              <GradientText>{t.about.languages.title}</GradientText>
             </h2>
-            <p className="text-xl text-gray-600">Communicating with families from around the world</p>
+            <p className="soft-text text-xl text-gray-600">{t.about.languages.subtitle}</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
