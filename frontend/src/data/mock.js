@@ -532,6 +532,13 @@ export const languages = {
       close: "Fechar",
       next: "Próximo",
       previous: "Anterior",
+      // Service specific
+      chooseThisTheme: "Escolher Este Tema",
+      selectedTheme: "Selecionado! 🎉",
+      choosePackage: "Escolher Pacote",
+      chooseLevel: "Escolher Nível",
+      bookFirstLesson: "Reservar Primeira Aula",
+      askQuestions: "Fazer Perguntas",
       // Date/Time
       days: {
         monday: "Segunda",
