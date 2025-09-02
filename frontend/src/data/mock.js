@@ -192,10 +192,10 @@ export const languages = {
       subtitle: "Do babysitting às festas de aniversário e aulas de skate - Ted torna cada momento especial!",
       babysitting: {
         title: "Babysitting com Ted",
-        description: "Serviços profissionais e exclusivos no Hotel Aquashow com atividades criativas, jogos e muitas gargalhadas!",
-        schedule: "19:30 - 02:00",
-        location: "Hotel Aquashow (Exclusivo)",
-        season: "Período de verão: Julho e Agosto 2025",
+        description: "Serviços profissionais de babysitting com atividades criativas, jogos e muitas gargalhadas!",
+        schedule: "Horários flexíveis disponíveis",
+        location: "Região de Faro e arredores",
+        season: "Disponível todo o ano",
         features: [
           "Atividades livres e jogos",
           "Dança e música",
@@ -213,7 +213,7 @@ export const languages = {
           duration: "Duração",
           hours: {
             "1hour": "1 Hora",
-            "2hours": "2 Horas", 
+            "2hours": "2 Horas",
             "3hours": "3 Horas",
             "4hours": "4 Horas",
             "6hours": "6 Horas Completas"
@@ -221,7 +221,7 @@ export const languages = {
         },
         cta: {
           title: "Pronto para Reservar Ted?",
-          subtitle: "Crie memórias mágicas para as suas crianças com babysitting profissional no Hotel Aquashow!",
+          subtitle: "Crie memórias mágicas para as suas crianças com babysitting profissional!",
           book: "Consultar Disponibilidade",
           contact: "Contactar Ted"
         }
@@ -232,23 +232,60 @@ export const languages = {
         themes: {
           title: "Temas Incríveis",
           subtitle: "Escolha o tema perfeito para a sua celebração especial",
-          magical: "Aventura Mágica",
-          creative: "Festa de Arte Criativa", 
-          adventure: "Explorador de Aventuras"
+          magical: {
+            name: "Aventura Mágica",
+            description: "Magos, fadas e criaturas mágicas",
+            activities: ["Truques de magia", "Jogos de contos de fadas", "Caça ao tesouro"]
+          },
+          creative: {
+            name: "Festa de Arte Criativa",
+            description: "Pintura, artesanato e expressão criativa",
+            activities: ["Pintura facial", "Artes e ofícios", "Decorações DIY"]
+          },
+          adventure: {
+            name: "Explorador de Aventuras",
+            description: "Jogos ao ar livre e exploração",
+            activities: ["Cursos de obstáculos", "Caça ao tesouro na natureza", "Jogos de equipa"]
+          }
         },
         packages: {
           title: "Pacotes de Festa",
           subtitle: "Escolha o pacote perfeito para a sua celebração",
-          basic: "Magia Básica",
-          premium: "Aventura Premium",
-          deluxe: "Espetacular Deluxe"
+          basic: {
+            name: "Magia Básica",
+            description: "Festa inicial perfeita",
+            features: ["Até 8 crianças", "2 horas de diversão", "Decorações básicas", "Jogos e atividades", "Lista de música"]
+          },
+          premium: {
+            name: "Aventura Premium",
+            description: "Escolha mais popular",
+            features: ["Até 12 crianças", "3 horas de magia", "Decorações premium", "Jogos interativos", "Fotos profissionais", "Atividades temáticas"]
+          },
+          deluxe: {
+            name: "Espetacular Deluxe",
+            description: "Experiência de festa definitiva",
+            features: ["Até 15 crianças", "4 horas completas", "Decorações completas", "Múltiplas atividades", "Foto e vídeo", "Criação tema personalizado", "Elementos surpresa"]
+          }
         },
         included: {
           title: "Todas as Festas Incluem",
-          decorations: "Decorações temáticas e montagem",
-          entertainment: "Música e jogos interativos",
-          memories: "Fotos de momentos especiais",
-          activities: "Atividades apropriadas para a idade"
+          subtitle: "Inclusões padrão em todos os pacotes de festa de aniversário",
+          decorations: {
+            title: "Decorações",
+            desc: "Decorações temáticas e montagem"
+          },
+          entertainment: {
+            title: "Entretenimento",
+            desc: "Música e jogos interativos"
+          },
+          memories: {
+            title: "Memórias",
+            desc: "Fotos de momentos especiais"
+          },
+          activities: {
+            title: "Atividades",
+            desc: "Atividades divertidas apropriadas para a idade"
+          }
         },
         cta: {
           title: "Prontos para a Festa de Aniversário Definitiva? 🎉",
@@ -263,25 +300,65 @@ export const languages = {
         levels: {
           title: "Níveis de Habilidade",
           subtitle: "Encontre o nível perfeito para a sua jornada no skate",
-          beginner: "Iniciante",
-          intermediate: "Intermédio",
-          advanced: "Avançado"
+          beginner: {
+            name: "Iniciante",
+            description: "Primeiros passos sobre rodas",
+            skills: ["Equilíbrio e postura", "Impulso básico", "Técnicas de queda segura"]
+          },
+          intermediate: {
+            name: "Intermédio",
+            description: "Construindo confiança",
+            skills: ["Curvas e paragens", "Controlo de velocidade", "Truques básicos"]
+          },
+          advanced: {
+            name: "Avançado",
+            description: "Dominar a prancha",
+            skills: ["Truques avançados", "Andar em rampa", "Desenvolvimento de estilo"]
+          }
         },
         packages: {
           title: "Pacotes de Aulas",
           subtitle: "Escolha o pacote perfeito para os seus objetivos no skate",
-          single: "Aula Individual",
-          package4: "Pacote 4 Aulas",
-          package8: "Curso 8 Aulas",
-          group: "Aulas em Grupo"
+          single: {
+            title: "Aula Individual",
+            description: "Perfeito para experimentar",
+            features: ["Sessão de 1 hora", "Todo equipamento incluído", "Atenção pessoal", "Equipamento de segurança fornecido"]
+          },
+          package4: {
+            title: "Pacote 4 Aulas",
+            description: "Opção de grande valor",
+            features: ["4 x sessões de 1 hora", "Construção progressiva de habilidades", "Equipamento incluído", "Acompanhe o seu progresso"]
+          },
+          package8: {
+            title: "Curso 8 Aulas",
+            description: "Caminho completo para mestria",
+            features: ["8 x sessões de 1 hora", "De iniciante a avançado", "Equipamento incluído", "Certificado de conclusão"]
+          },
+          group: {
+            title: "Aulas em Grupo",
+            description: "Diversão com amigos",
+            features: ["Mínimo 4 pessoas", "Experiência partilhada", "Construção de equipa", "Ótimo para festas"]
+          }
         },
         safety: {
           title: "Segurança e Equipamento",
           subtitle: "A sua segurança é a nossa prioridade",
-          safetyFirst: "Segurança Primeiro",
-          expertTeaching: "Ensino Especializado", 
-          qualityEquipment: "Equipamento de Qualidade",
-          provenMethod: "Método Comprovado"
+          safetyFirst: {
+            title: "Segurança Primeiro",
+            desc: "Instrução profissional de segurança"
+          },
+          expertTeaching: {
+            title: "Ensino Especializado",
+            desc: "Instrutor experiente e certificado"
+          },
+          qualityEquipment: {
+            title: "Equipamento de Qualidade",
+            desc: "Skateboards e equipamento profissionais"
+          },
+          provenMethod: {
+            title: "Método Comprovado",
+            desc: "Abordagem de aprendizagem progressiva"
+          }
         },
         cta: {
           title: "Pronto para Andar? 🛹",
