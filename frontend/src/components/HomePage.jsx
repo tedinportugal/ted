@@ -243,14 +243,22 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
             </div>
 
             <div className="relative">
-              <div className="w-full h-80 bg-gradient-to-br from-orange-200 to-teal-200 rounded-3xl flex items-center justify-center overflow-hidden shadow-2xl">
-                <div className="text-6xl">🧸</div>
+              <div className="w-full max-w-md mx-auto">
+                <div className="relative">
+                  <div className="w-80 h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl mx-auto">
+                    <img
+                      src={tedRealPhoto}
+                      alt="Ted - Your Children's Entertainer"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Fixed decorative elements around Ted's photo */}
+                  <div className="absolute -top-6 -right-6 text-4xl">⭐</div>
+                  <div className="absolute -bottom-6 -left-6 text-4xl">🎈</div>
+                  <div className="absolute top-1/2 -left-8 text-3xl animate-glow">❤️</div>
+                </div>
               </div>
-              
-              {/* Fixed decorative elements around the image */}
-              <div className="absolute -top-4 -right-4 text-4xl">⭐</div>
-              <div className="absolute -bottom-4 -left-4 text-4xl">🎈</div>
-              <div className="absolute top-1/2 -left-8 text-3xl animate-glow">❤️</div>
             </div>
           </div>
         </div>
