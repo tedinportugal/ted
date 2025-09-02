@@ -170,8 +170,8 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">
-                <GradientText>Experience & Qualifications</GradientText>
+              <h2 className="bubble-text text-4xl font-bold mb-6">
+                <GradientText>{t.about.experience.title}</GradientText>
               </h2>
               
               <div className="space-y-6">
@@ -180,8 +180,8 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Professional Certifications</h3>
-                    <p className="text-gray-600">TEA and S21 certified, ensuring the highest standards in children's care and entertainment.</p>
+                    <h3 className="bubble-text text-xl font-semibold text-gray-800 mb-2">{t.about.experience.certifications}</h3>
+                    <p className="soft-text text-gray-600">{t.about.experience.certificationsDesc}</p>
                   </div>
                 </div>
 
@@ -190,8 +190,8 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
                     <Star className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">{about.experience}</h3>
-                    <p className="text-gray-600">Extensive experience working with children of all ages, creating safe and engaging environments.</p>
+                    <h3 className="bubble-text text-xl font-semibold text-gray-800 mb-2">{t.about.experience.experienceTitle}</h3>
+                    <p className="soft-text text-gray-600">{t.about.experience.experienceDesc}</p>
                   </div>
                 </div>
 
@@ -200,8 +200,8 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
                     <Heart className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Passion for Children</h3>
-                    <p className="text-gray-600">Genuine love for working with children, creating magical moments that inspire creativity and joy.</p>
+                    <h3 className="bubble-text text-xl font-semibold text-gray-800 mb-2">{t.about.experience.passion}</h3>
+                    <p className="soft-text text-gray-600">{t.about.experience.passionDesc}</p>
                   </div>
                 </div>
               </div>
