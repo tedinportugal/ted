@@ -64,17 +64,17 @@ const AboutPage = ({ currentLanguage, setCurrentPage }) => {
                 <div className="relative">
                   <div className="w-80 h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl mx-auto">
                     <img
-                      src={tedLogoUrl}
-                      alt="Ted"
+                      src={tedRealPhoto}
+                      alt="Ted - Real Photo"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   
-                  {/* Floating elements around Ted's photo */}
-                  <div className="absolute -top-6 -right-6 text-4xl animate-bounce">⭐</div>
-                  <div className="absolute -bottom-6 -left-6 text-4xl animate-pulse">❤️</div>
-                  <div className="absolute top-1/2 -left-12 text-3xl animate-spin" style={{ animationDuration: '4s' }}>🎈</div>
-                  <div className="absolute top-1/4 -right-12 text-3xl animate-bounce" style={{ animationDelay: '1s' }}>🧸</div>
+                  {/* Fixed decorative elements around Ted's photo */}
+                  <div className="absolute -top-6 -right-6 text-4xl">⭐</div>
+                  <div className="absolute -bottom-6 -left-6 text-4xl">🎈</div>
+                  <div className="absolute top-1/2 -left-12 text-3xl animate-glow">❤️</div>
+                  <div className="absolute top-1/4 -right-12 text-3xl" style={{ animationDelay: '1s' }}>🧸</div>
                 </div>
               </div>
             </div>
