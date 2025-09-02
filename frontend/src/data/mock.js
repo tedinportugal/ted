@@ -785,7 +785,51 @@ export const languages = {
       happyKids: "500+",
       rating: "5★",
       yearsExp: "3+",
-      from: "From"
+      from: "From",
+      selected: "Selected",
+      chooseTheme: "Choose This Theme",
+      choosePackage: "Choose Package",
+      chooseLevel: "Choose Level",
+      whatIncluded: "What's Included",
+      testimonials: "What Families Say",
+      testimonialsSub: "Real stories from happy families",
+      readyForMagic: "Ready for Some Magic?",
+      bookToday: "Book Ted today and create unforgettable memories for your children!",
+      // System texts
+      loading: "Loading...",
+      error: "Error",
+      success: "Success",
+      required: "Required",
+      optional: "Optional",
+      submit: "Submit",
+      cancel: "Cancel",
+      close: "Close",
+      next: "Next",
+      previous: "Previous",
+      // Date/Time
+      days: {
+        monday: "Monday",
+        tuesday: "Tuesday", 
+        wednesday: "Wednesday",
+        thursday: "Thursday",
+        friday: "Friday",
+        saturday: "Saturday",
+        sunday: "Sunday"
+      },
+      months: {
+        january: "January",
+        february: "February",
+        march: "March",
+        april: "April", 
+        may: "May",
+        june: "June",
+        july: "July",
+        august: "August",
+        september: "September",
+        october: "October",
+        november: "November", 
+        december: "December"
+      }
     }
   },
   es: {
