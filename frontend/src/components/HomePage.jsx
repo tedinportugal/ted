@@ -95,10 +95,10 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
           </div>
         </div>
 
-        {/* Animated background elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-300 rounded-full opacity-20 animate-bounce"></div>
-        <div className="absolute top-32 right-16 w-16 h-16 bg-pink-400 rounded-full opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-12 h-12 bg-blue-400 rounded-full opacity-25 animate-bounce" style={{ animationDelay: '1s' }}></div>
+        {/* Animated background elements - fixed positions */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-300 rounded-full opacity-20"></div>
+        <div className="absolute top-32 right-16 w-16 h-16 bg-pink-400 rounded-full opacity-30 animate-gentle-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-12 h-12 bg-blue-400 rounded-full opacity-25"></div>
       </section>
 
       {/* Services Section */}
