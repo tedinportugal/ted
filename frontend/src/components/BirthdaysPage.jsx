@@ -126,7 +126,7 @@ const BirthdaysPage = ({ currentLanguage, setCurrentPage }) => {
                     className="w-full"
                     variant={selectedTheme === index ? "primary" : "outline"}
                   >
-                    {selectedTheme === index ? "Selected! 🎉" : "Choose This Theme"}
+                    {selectedTheme === index ? (t.common.selectedTheme || "Selected! 🎉") : (t.common.chooseThisTheme || "Choose This Theme")}
                   </MagicalButton>
                 </div>
               </div>
