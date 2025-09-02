@@ -122,11 +122,18 @@ export const mockData = {
   
   about: {
     name: "Ted",
-    bio: "Hi! I'm Ted, a passionate children's entertainer and educator based in Portugal. With certifications in TEA and S21, I bring creativity, energy, and genuine care to every interaction with children. Whether it's babysitting, throwing an amazing birthday party, or teaching skateboarding, my goal is to create magical moments that children will remember forever!",
+    age: "23 anos",
+    origin: "Vim do Brasil para ser animador em Portugal",
+    passion: "Animador por amor",
+    profession: "Professor de Skate", 
+    personality: "Amo apanhadas",
+    philosophy: "Não gosto de crianças a passar o dia no telemóvel",
+    bio: "Olá! Sou Ted, tenho 23 anos e vim do Brasil para ser animador em Portugal. Sou um animador por amor e professor de skate apaixonado. Com certificações em TEA e S21, trago criatividade, energia e cuidado genuíno a cada interação com crianças. Amo apanhadas e acredito que as crianças devem brincar e criar memórias em vez de passar o dia no telemóvel. O meu objetivo é criar momentos mágicos que as crianças lembrarão para sempre!",
     certifications: ["TEA Certified", "S21 Certification", "First Aid Certified"],
-    experience: "5+ years working with children",
+    experience: "Animador infantil profissional",
     languages: ["Portuguese", "English", "Spanish", "French"],
-    specialties: ["Creative activities", "Educational games", "Outdoor adventures", "Arts & crafts"]
+    specialties: ["Creative activities", "Educational games", "Outdoor adventures", "Arts & crafts"],
+    realPhoto: "https://customer-assets.emergentagent.com/job_skate-party/artifacts/pg049z35_5D7B8BF4-317A-4305-A85C-42BA646C6DC4.png"
   },
 
   contact: {
