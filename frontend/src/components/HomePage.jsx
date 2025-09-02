@@ -221,7 +221,7 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="bubble-text text-4xl font-bold mb-6">
-                <GradientText>Meet Ted!</GradientText>
+                <GradientText>{t.about.title}</GradientText>
               </h2>
               <p className="soft-text text-lg text-gray-700 mb-6 leading-relaxed">
                 {mockData.about.bio.substring(0, 200)}...
@@ -231,13 +231,13 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
                 {mockData.about.certifications.map((cert, index) => (
                   <div key={index} className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
                     <Award className="w-4 h-4 text-orange-500" />
-                    <span className="font-medium text-gray-700">{cert}</span>
+                    <span className="soft-text font-medium text-gray-700">{cert}</span>
                   </div>
                 ))}
               </div>
 
               <MagicalButton onClick={() => setCurrentPage('about')}>
-                Learn More About Ted
+                {t.about.cta.contact}
               </MagicalButton>
             </div>
 
