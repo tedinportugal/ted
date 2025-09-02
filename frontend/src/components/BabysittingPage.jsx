@@ -100,16 +100,16 @@ const BabysittingPage = ({ currentLanguage, setCurrentPage }) => {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Pricing Calculator</GradientText>
+            <h2 className="bubble-text text-4xl font-bold mb-4">
+              <GradientText>{t.services.babysitting.pricing.title}</GradientText>
             </h2>
-            <p className="text-xl text-gray-600">Select the number of children and duration to see pricing</p>
+            <p className="soft-text text-xl text-gray-600">{t.services.babysitting.pricing.subtitle}</p>
           </div>
 
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-xl">
             {/* Children Selection */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Number of Children</h3>
+              <h3 className="bubble-text text-2xl font-bold text-gray-800 mb-6 text-center">{t.services.babysitting.pricing.children}</h3>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 {childrenOptions.map((option) => (
                   <button
