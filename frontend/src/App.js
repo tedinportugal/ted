@@ -9,6 +9,7 @@ import SkatePage from "./components/SkatePage";
 import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Footer from "./components/Footer";
 import { MagicalBackground } from "./components/MagicalElements";
 import { Toaster } from "./components/ui/toaster";
 
