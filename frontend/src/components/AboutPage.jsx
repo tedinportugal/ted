@@ -6,7 +6,7 @@ import { MagicalButton, GradientText } from './MagicalElements';
 const AboutPage = ({ currentLanguage, setCurrentPage }) => {
   const about = mockData.about;
   const t = languages[currentLanguage];
-  const tedLogoUrl = "https://customer-assets.emergentagent.com/job_skate-party/artifacts/0195n2c4_1EFB7748-DA5F-4EA5-914F-2AC90C2B4BEB.png";
+  const tedRealPhoto = about.realPhoto;
 
   const stats = [
     { number: t.common.happyKids, label: t.about.stats.happyKids, icon: Heart, color: 'text-pink-500' },
