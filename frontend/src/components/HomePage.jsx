@@ -194,13 +194,13 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
 
             <div className="relative">
               <div className="w-full h-80 bg-gradient-to-br from-orange-200 to-teal-200 rounded-3xl flex items-center justify-center overflow-hidden shadow-2xl">
-                <div className="text-6xl animate-bounce">🧸</div>
+                <div className="text-6xl">🧸</div>
               </div>
               
-              {/* Floating elements around the image */}
-              <div className="absolute -top-4 -right-4 text-4xl animate-spin">⭐</div>
-              <div className="absolute -bottom-4 -left-4 text-4xl animate-bounce">🎈</div>
-              <div className="absolute top-1/2 -left-8 text-3xl animate-pulse">❤️</div>
+              {/* Fixed decorative elements around the image */}
+              <div className="absolute -top-4 -right-4 text-4xl">⭐</div>
+              <div className="absolute -bottom-4 -left-4 text-4xl">🎈</div>
+              <div className="absolute top-1/2 -left-8 text-3xl animate-glow">❤️</div>
             </div>
           </div>
         </div>
