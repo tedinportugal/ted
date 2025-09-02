@@ -103,7 +103,7 @@ const BabysittingPage = ({ currentLanguage, setCurrentPage }) => {
 
             {/* Pricing Table */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Pricing for {childrenOptions.find(opt => opt.key === selectedChildren)?.label}</h3>
+              <h3 className="bubble-text text-2xl font-bold text-gray-800 mb-6 text-center">Pricing for {childrenOptions.find(opt => opt.key === selectedChildren)?.label}</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 {timeOptions.map((time) => (
