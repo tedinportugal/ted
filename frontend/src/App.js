@@ -70,6 +70,9 @@ function App() {
         {renderCurrentPage()}
       </main>
 
+      {/* Footer */}
+      <Footer currentLanguage={currentLanguage} />
+
       {/* WhatsApp floating button */}
       <WhatsAppButton />
 
