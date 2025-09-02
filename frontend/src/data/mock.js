@@ -449,6 +449,9 @@ export const languages = {
         send: "Enviar Mensagem",
         whatsappInstead: "WhatsApp Em Vez Disso",
         tip: "Dica de Resposta Rápida: Para resposta mais rápida, use WhatsApp! Ted normalmente responde em minutos.",
+        thankYou: "Obrigado! Ted entrará em contacto consigo em breve. Para resposta imediata, use WhatsApp.",
+        whatsappMessage: "Olá Ted! Estou interessado nos seus serviços. Podemos conversar?",
+        required: "Obrigatório",
         services: {
           select: "Selecione um serviço",
           babysitting: "Babysitting",
@@ -456,6 +459,11 @@ export const languages = {
           skate: "Aulas Skate",
           other: "Outro"
         }
+      },
+      calendar: {
+        days: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+        selected: "Selecionado: {date}",
+        selectDate: "Selecione uma data"
       }
     },
     common: {
