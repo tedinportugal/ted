@@ -522,10 +522,10 @@ export const languages = {
       subtitle: "From babysitting adventures to birthday party magic and skate lessons - Ted makes every moment special!",
       babysitting: {
         title: "Babysitting with Ted",
-        description: "Professional and exclusive babysitting services at Hotel Aquashow with creative activities, games, and lots of laughter!",
-        schedule: "19:30 - 02:00",
-        location: "Hotel Aquashow (Exclusive)",
-        season: "Summer period: July and August 2025",
+        description: "Professional babysitting services with creative activities, games, and lots of laughter!",
+        schedule: "Flexible hours available",
+        location: "Faro region and surrounding areas",
+        season: "Available year-round",
         features: [
           "Free play activities and games",
           "Dancing and music",
@@ -551,7 +551,7 @@ export const languages = {
         },
         cta: {
           title: "Ready to Book Ted?",
-          subtitle: "Create magical memories for your children with professional babysitting at Hotel Aquashow!",
+          subtitle: "Create magical memories for your children with professional babysitting!",
           book: "Check Availability",
           contact: "Contact Ted"
         }
@@ -562,23 +562,60 @@ export const languages = {
         themes: {
           title: "Amazing Party Themes",
           subtitle: "Choose the perfect theme for your special celebration",
-          magical: "Magical Adventure",
-          creative: "Creative Art Party", 
-          adventure: "Adventure Explorer"
+          magical: {
+            name: "Magical Adventure",
+            description: "Wizards, fairies, and magical creatures",
+            activities: ["Magic tricks", "Fairy tale games", "Treasure hunt"]
+          },
+          creative: {
+            name: "Creative Art Party",
+            description: "Painting, crafting, and creative expression",
+            activities: ["Face painting", "Arts & crafts", "DIY decorations"]
+          },
+          adventure: {
+            name: "Adventure Explorer",
+            description: "Outdoor games and exploration",
+            activities: ["Obstacle courses", "Nature scavenger hunt", "Team games"]
+          }
         },
         packages: {
           title: "Party Packages",
           subtitle: "Choose the perfect package for your celebration",
-          basic: "Basic Magic",
-          premium: "Premium Adventure",
-          deluxe: "Deluxe Spectacular"
+          basic: {
+            name: "Basic Magic",
+            description: "Perfect starter party",
+            features: ["Up to 8 kids", "2 hours of fun", "Basic decorations", "Games & activities", "Music playlist"]
+          },
+          premium: {
+            name: "Premium Adventure",
+            description: "Most popular choice",
+            features: ["Up to 12 kids", "3 hours of magic", "Premium decorations", "Interactive games", "Professional photos", "Themed activities"]
+          },
+          deluxe: {
+            name: "Deluxe Spectacular",
+            description: "Ultimate party experience",
+            features: ["Up to 15 kids", "4 hours complete", "Full decorations setup", "Multiple activities", "Photo & video", "Custom theme creation", "Surprise elements"]
+          }
         },
         included: {
           title: "Every Party Includes",
-          decorations: "Themed decorations and setup",
-          entertainment: "Music and interactive games",
-          memories: "Photos of special moments",
-          activities: "Age-appropriate fun activities"
+          subtitle: "Standard inclusions in all birthday party packages",
+          decorations: {
+            title: "Decorations",
+            desc: "Themed decorations and setup"
+          },
+          entertainment: {
+            title: "Entertainment",
+            desc: "Music and interactive games"
+          },
+          memories: {
+            title: "Memories",
+            desc: "Photos of special moments"
+          },
+          activities: {
+            title: "Activities",
+            desc: "Age-appropriate fun activities"
+          }
         },
         cta: {
           title: "Ready for the Ultimate Birthday Party? 🎉",
@@ -593,25 +630,65 @@ export const languages = {
         levels: {
           title: "Skill Levels",
           subtitle: "Find the perfect level for your skating journey",
-          beginner: "Beginner",
-          intermediate: "Intermediate",
-          advanced: "Advanced"
+          beginner: {
+            name: "Beginner",
+            description: "First steps on wheels",
+            skills: ["Balance and posture", "Basic pushing", "Safe falling techniques"]
+          },
+          intermediate: {
+            name: "Intermediate", 
+            description: "Building confidence",
+            skills: ["Turning and stopping", "Speed control", "Basic tricks"]
+          },
+          advanced: {
+            name: "Advanced",
+            description: "Master the board",
+            skills: ["Advanced tricks", "Ramp riding", "Style development"]
+          }
         },
         packages: {
           title: "Lesson Packages",
           subtitle: "Choose the perfect package for your skating goals",
-          single: "Single Lesson",
-          package4: "4 Lesson Package",
-          package8: "8 Lesson Course",
-          group: "Group Lessons"
+          single: {
+            title: "Single Lesson",
+            description: "Perfect for trying out",
+            features: ["1 hour session", "All equipment included", "Personal attention", "Safety gear provided"]
+          },
+          package4: {
+            title: "4 Lesson Package",
+            description: "Great value option",
+            features: ["4 x 1 hour sessions", "Progressive skill building", "Equipment included", "Track your progress"]
+          },
+          package8: {
+            title: "8 Lesson Course",
+            description: "Complete mastery path",
+            features: ["8 x 1 hour sessions", "From beginner to advanced", "Equipment included", "Certificate completion"]
+          },
+          group: {
+            title: "Group Lessons",
+            description: "Fun with friends",
+            features: ["Minimum 4 people", "Shared experience", "Team building", "Great for parties"]
+          }
         },
         safety: {
           title: "Safety & Equipment",
           subtitle: "Your safety is our top priority",
-          safetyFirst: "Safety First",
-          expertTeaching: "Expert Teaching", 
-          qualityEquipment: "Quality Equipment",
-          provenMethod: "Proven Method"
+          safetyFirst: {
+            title: "Safety First",
+            desc: "Professional safety instruction"
+          },
+          expertTeaching: {
+            title: "Expert Teaching", 
+            desc: "Experienced and certified instructor"
+          },
+          qualityEquipment: {
+            title: "Quality Equipment",
+            desc: "Professional skateboards and gear"
+          },
+          provenMethod: {
+            title: "Proven Method",
+            desc: "Progressive learning approach"
+          }
         },
         cta: {
           title: "Ready to Roll? 🛹",
