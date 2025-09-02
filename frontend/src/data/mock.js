@@ -410,6 +410,7 @@ export const languages = {
       subtitle: "Criando momentos mágicos por todo Portugal",
       bio: "Olá! Sou Ted, tenho 23 anos e vim do Brasil para ser animador em Portugal. Sou um animador por amor e professor de skate apaixonado. Com certificações em TEA e S21, trago criatividade, energia e cuidado genuíno a cada interação com crianças. Amo apanhadas e acredito que as crianças devem brincar e criar memórias em vez de passar o dia no telemóvel. O meu objetivo é criar momentos mágicos que as crianças lembrarão para sempre!",
       stats: {
+        title: "Ted em Números",
         happyKids: "Crianças Felizes",
         avgRating: "Avaliação Média", 
         experience: "Anos de Experiência",
