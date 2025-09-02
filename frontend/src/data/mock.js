@@ -1257,11 +1257,14 @@ export const languages = {
     about: {
       title: "Rencontrez Ted!",
       subtitle: "Créant des moments magiques à travers le Portugal",
+      bio: "Salut! Je suis Ted, j'ai 23 ans et je suis venu du Brésil pour être animateur au Portugal. Je suis un animateur par amour et professeur de skate passionné. Avec des certifications en TEA et S21, j'apporte créativité, énergie et soin véritable à chaque interaction avec les enfants. J'aime les câlins et je crois que les enfants devraient jouer et créer des souvenirs au lieu de passer toute la journée sur leurs téléphones. Mon objectif est de créer des moments magiques dont les enfants se souviendront pour toujours!",
       stats: {
+        title: "Ted en Chiffres",
         happyKids: "Enfants Heureux",
         avgRating: "Note Moyenne", 
         experience: "Années d'Expérience",
-        parties: "Fêtes Organisées"
+        parties: "Fêtes Organisées",
+        languages: "Langues"
       },
       languages: {
         title: "Langues Parlées",
@@ -1271,22 +1274,31 @@ export const languages = {
         title: "Spécialités de Ted",
         subtitle: "Ce qui rend Ted spécial dans le divertissement pour enfants",
         creative: "Activités Créatives",
+        creativeDesc: "Arts, artisanat et jeu imaginatif",
         educational: "Jeux Éducatifs",
+        educationalDesc: "Apprentissage par le plaisir et l'interaction",
         outdoor: "Aventures en Plein Air",
-        arts: "Arts et Artisanat"
+        outdoorDesc: "Exploration sûre et jeu actif",
+        arts: "Arts et Artisanat",
+        artsDesc: "Projets créatifs pratiques"
       },
       experience: {
         title: "Expérience et Qualifications",
         certifications: "Certifications Professionnelles",
-        experienceDesc: "Vaste expérience de travail avec des enfants de tous âges",
-        passion: "Passion pour les Enfants"
+        certificationsDesc: "Certifié TEA et S21, garantissant les plus hauts standards dans les soins et le divertissement des enfants.",
+        experienceTitle: "Expérience Professionnelle",
+        experienceDesc: "Vaste expérience de travail avec des enfants de tous âges, créant des environnements sûrs et engageants.",
+        passion: "Passion pour les Enfants",
+        passionDesc: "Amour véritable pour travailler avec les enfants, créant des moments magiques qui inspirent la créativité et la joie."
       },
       cta: {
         title: "Prêt à Rencontrer Ted?",
         subtitle: "Créons ensemble des souvenirs magiques pour vos enfants!",
         contact: "Contacter Ted",
         services: "Explorer Services"
-      }
+      },
+      certified: "Professionnel Certifié",
+      certifiedDesc: "Ted apporte formation professionnelle et passion véritable ensemble pour créer des expériences inoubliables pour les enfants."
     },
     contact: {
       title: "Entrer en Contact",
