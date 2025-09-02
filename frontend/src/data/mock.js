@@ -888,6 +888,13 @@ export const languages = {
       close: "Close",
       next: "Next",
       previous: "Previous",
+      // Service specific
+      chooseThisTheme: "Choose This Theme",
+      selectedTheme: "Selected! 🎉",
+      choosePackage: "Choose Package",
+      chooseLevel: "Choose Level",
+      bookFirstLesson: "Book First Lesson",
+      askQuestions: "Ask Questions",
       // Date/Time
       days: {
         monday: "Monday",
