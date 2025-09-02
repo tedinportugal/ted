@@ -131,6 +131,11 @@ const ContactPage = ({ currentLanguage }) => {
     window.open(`https://instagram.com/${contact.instagram.replace('@', '')}`, '_blank');
   };
 
+  const handleWhatsApp = () => {
+    const message = encodeURIComponent('Hi Ted! I would like to know more about your services.');
+    window.open(`https://wa.me/${contact.whatsapp.replace('+', '')}?text=${message}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-orange-50 to-purple-50">
       {/* Hero Section */}
