@@ -3,8 +3,8 @@ export const mockData = {
   services: {
     babysitting: {
       title: "Babysitting with Ted",
-      description: "Professional and exclusive babysitting services at Hotel Aquashow with creative activities, games, and lots of laughter!",
-      schedule: "19:30 - 02:00",
+      description: "Professional babysitting services with creative activities, games, and lots of laughter!",
+      schedule: "Flexible hours available",
       features: [
         "Free play activities and games",
         "Dancing and music",
