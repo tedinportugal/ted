@@ -73,7 +73,7 @@ const HomePage = ({ currentLanguage, setCurrentPage }) => {
                 className="text-lg px-8 py-4"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Check Availability
+                {t.hero.checkAvailability}
               </MagicalButton>
             </div>
 
