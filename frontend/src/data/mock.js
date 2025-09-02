@@ -159,21 +159,51 @@ export const mockData = {
   testimonials: [
     {
       name: "Maria Silva",
-      text: "Ted is absolutely amazing with children! My daughter had the best birthday party ever. Highly recommended!",
+      text: {
+        pt: "Ted é absolutamente incrível com crianças! A minha filha teve a melhor festa de aniversário de sempre. Altamente recomendado!",
+        en: "Ted is absolutely amazing with children! My daughter had the best birthday party ever. Highly recommended!",
+        es: "¡Ted es absolutamente increíble con los niños! Mi hija tuvo la mejor fiesta de cumpleaños de su vida. ¡Muy recomendado!",
+        fr: "Ted est absolument incroyable avec les enfants! Ma fille a eu la meilleure fête d'anniversaire de sa vie. Hautement recommandé!"
+      },
       rating: 5,
-      service: "Birthday Party"
+      service: {
+        pt: "Festa Aniversário",
+        en: "Birthday Party",
+        es: "Fiesta Cumpleaños", 
+        fr: "Fête Anniversaire"
+      }
     },
     {
       name: "João Santos", 
-      text: "Professional, creative, and so much fun! Ted made babysitting feel like a party for our kids.",
+      text: {
+        pt: "Profissional, criativo e muito divertido! Ted fez o babysitting parecer uma festa para as nossas crianças.",
+        en: "Professional, creative, and so much fun! Ted made babysitting feel like a party for our kids.",
+        es: "¡Profesional, creativo y muy divertido! Ted hizo que el cuidado de niños se sintiera como una fiesta para nuestros hijos.",
+        fr: "Professionnel, créatif et tellement amusant! Ted a fait que le baby-sitting ressemble à une fête pour nos enfants."
+      },
       rating: 5,
-      service: "Babysitting"
+      service: {
+        pt: "Babysitting",
+        en: "Babysitting",
+        es: "Cuidado Niños",
+        fr: "Baby-sitting"
+      }
     },
     {
       name: "Ana Costa",
-      text: "My son learned to skateboard in just a few lessons with Ted. Patient and encouraging teacher!",
+      text: {
+        pt: "O meu filho aprendeu a andar de skate em apenas algumas aulas com Ted. Professor paciente e encorajador!",
+        en: "My son learned to skateboard in just a few lessons with Ted. Patient and encouraging teacher!",
+        es: "¡Mi hijo aprendió a patinar en solo unas pocas lecciones con Ted. ¡Maestro paciente y alentador!",
+        fr: "Mon fils a appris à faire du skateboard en seulement quelques leçons avec Ted. Professeur patient et encourageant!"
+      },
       rating: 5,
-      service: "Skate Lessons"
+      service: {
+        pt: "Aulas Skate",
+        en: "Skate Lessons",
+        es: "Clases Skate",
+        fr: "Cours Skate"
+      }
     }
   ]
 };
