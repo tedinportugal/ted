@@ -59,8 +59,8 @@ export const mockData = {
           "description": "Creative beading workshop - each child takes home their creation"
         }
       },
-      location: "Hotel Aquashow (Exclusive)",
-      season: "Summer period: July and August 2025",
+      location: "Faro region and surrounding areas",
+      season: "Available year-round",
       ages: "All ages welcome"
     },
     birthdays: {
