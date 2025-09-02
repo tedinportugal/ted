@@ -192,7 +192,7 @@ const SkatePage = ({ currentLanguage, setCurrentPage }) => {
                     className="w-full text-sm px-4 py-2"
                     variant={option.popular ? "primary" : "secondary"}
                   >
-                    Book Now
+                    {t.common.bookNow || "Book Now"}
                   </MagicalButton>
                 </div>
               </div>
