@@ -42,19 +42,10 @@ export const mockData = {
           "4hours": "160€",
           "6hours": "200€"
         },
-        "8children": {
-          "1hour": "75€", 
-          "2hours": "120€",
-          "3hours": "170€",
-          "4hours": "200€",
-          "6hours": "260€"
-        }
-      },
       workshops: {
         "micangas": {
           "1child": "10€",
           "2children": "18€", 
-          "8children": "30€",
           "duration": "30-45 min",
           "description": "Creative beading workshop - each child takes home their creation"
         }
@@ -64,13 +55,13 @@ export const mockData = {
       ages: "All ages welcome"
     },
     birthdays: {
-      title: "Magical Birthday Parties",
-      description: "Unforgettable themed birthday parties filled with magic, games, and endless fun!",
+      title: "Birthday Parties",
+      description: "Unforgettable themed birthday parties, games, and endless fun!",
       themes: [
         {
-          name: "Magical Adventure",
-          description: "Wizards, fairies, and magical creatures",
-          activities: ["Magic tricks", "Fairy tale games", "Treasure hunt"]
+          name: "Adventure",
+          description: " fairies, and magical creatures",
+          activities: ["Fairy tale games", "Treasure hunt"]
         },
         {
           name: "Creative Art Party",
@@ -80,46 +71,17 @@ export const mockData = {
         {
           name: "Adventure Explorer",
           description: "Outdoor games and exploration",
-          activities: ["Obstacle courses", "Nature scavenger hunt", "Team games"]
+          activities: ["Face Paiting", "Moldable balloons", "Soap bubbles"]
         }
       ],
       pricing: {
-        basic: "120€ (up to 8 kids, 2 hours)",
-        premium: "180€ (up to 12 kids, 3 hours)",
-        deluxe: "250€ (up to 15 kids, 4 hours with decorations)"
+        basic: "200€ (2 animators, 1 workshops & 1 activities 2 hours)",
+        premium: "280€ (2 animators, 1 workshops & 2 activities 3 hours)",
+        deluxe: "360€ (2 animators, 2 workshops & 3 activities 4 hours )"
       },
-      included: ["Decorations", "Games & activities", "Music & entertainment", "Photos"]
+      included: ["Games & activities", "Music & entertainment"]
     },
-    skate: {
-      title: "Skate Lessons with Ted",
-      description: "Learn to skate with confidence! Fun, safe, and progressive lessons for all skill levels.",
-      levels: [
-        {
-          name: "Beginner",
-          description: "First steps on wheels",
-          skills: ["Balance and posture", "Basic pushing", "Safe falling techniques"]
-        },
-        {
-          name: "Intermediate", 
-          description: "Building confidence",
-          skills: ["Turning and stopping", "Speed control", "Basic tricks"]
-        },
-        {
-          name: "Advanced",
-          description: "Master the board",
-          skills: ["Advanced tricks", "Ramp riding", "Style development"]
-        }
-      ],
-      pricing: {
-        single: "25€/lesson (1 hour)",
-        package4: "90€/4 lessons",
-        package8: "160€/8 lessons",
-        group: "15€/person (min 4 people)"
-      },
-      equipment: "Skateboard and safety gear included"
-    }
-  },
-  
+      
   about: {
     name: "Ted",
     age: "23 anos",
@@ -169,8 +131,6 @@ export const mockData = {
       service: {
         pt: "Festa Aniversário",
         en: "Birthday Party",
-        es: "Fiesta Cumpleaños", 
-        fr: "Fête Anniversaire"
       }
     },
     {
@@ -178,15 +138,11 @@ export const mockData = {
       text: {
         pt: "Profissional, criativo e muito divertido! Ted fez o babysitting parecer uma festa para as nossas crianças.",
         en: "Professional, creative, and so much fun! Ted made babysitting feel like a party for our kids.",
-        es: "¡Profesional, creativo y muy divertido! Ted hizo que el cuidado de niños se sintiera como una fiesta para nuestros hijos.",
-        fr: "Professionnel, créatif et tellement amusant! Ted a fait que le baby-sitting ressemble à une fête pour nos enfants."
       },
       rating: 5,
       service: {
         pt: "Babysitting",
         en: "Babysitting",
-        es: "Cuidado Niños",
-        fr: "Baby-sitting"
       }
     },
     {
@@ -194,15 +150,10 @@ export const mockData = {
       text: {
         pt: "O meu filho aprendeu a andar de skate em apenas algumas aulas com Ted. Professor paciente e encorajador!",
         en: "My son learned to skateboard in just a few lessons with Ted. Patient and encouraging teacher!",
-        es: "¡Mi hijo aprendió a patinar en solo unas pocas lecciones con Ted. ¡Maestro paciente y alentador!",
-        fr: "Mon fils a appris à faire du skateboard en seulement quelques leçons avec Ted. Professeur patient et encourageant!"
-      },
       rating: 5,
       service: {
         pt: "Aulas Skate",
-        en: "Skate Lessons",
-        es: "Clases Skate",
-        fr: "Cours Skate"
+        en: "Skate Lessons"
       }
     }
   ]
@@ -214,24 +165,23 @@ export const languages = {
       home: "Início",
       babysitting: "Babysitting", 
       birthdays: "Festas Aniversário",
-      skate: "Aulas Skate",
       about: "Sobre Ted",
       contact: "Contacto"
     },
     hero: {
-      title: "Diversão Mágica com Ted!",
-      subtitle: "Babysitting, festas de aniversário e aulas de skate cheias de magia e aventura",
+      title: "Animação com Ted!",
+      subtitle: "Babysitting, festas de aniversário ",
       cta: "Descobre os Serviços",
       checkAvailability: "Consultar Disponibilidade"
     },
     services: {
-      title: "Serviços Mágicos",
-      subtitle: "Do babysitting às festas de aniversário e aulas de skate - Ted torna cada momento especial!",
+      title: "Serviços",
+      subtitle: "Do babysitting às festas de aniversário - Ted torna cada momento especial!",
       babysitting: {
         title: "Babysitting com Ted",
-        description: "Serviços profissionais de babysitting com atividades criativas, jogos e muitas gargalhadas!",
+        description: "Serviços profissionais de babysitting com atividades criativas, jogos e muita diversão !",
         schedule: "Horários flexíveis disponíveis",
-        location: "Região de Faro e arredores",
+        location: "Região de Algarve",
         season: "Disponível todo o ano",
         features: [
           "Atividades livres e jogos",
@@ -258,29 +208,29 @@ export const languages = {
         },
         cta: {
           title: "Pronto para Reservar Ted?",
-          subtitle: "Crie memórias mágicas para as suas crianças com babysitting profissional!",
+          subtitle: "Crie memórias para as suas crianças com babysitting profissional!",
           book: "Consultar Disponibilidade",
           contact: "Contactar Ted"
         }
       },
       birthdays: {
-        title: "Festas de Aniversário Mágicas",
-        description: "Festas de aniversário temáticas inesquecíveis, cheias de magia, jogos e diversão sem fim!",
+        title: "Festas de Aniversário",
+        description: "Festas de aniversário temáticas inesquecíveis,jogos e diversão sem fim!",
         themes: {
           title: "Temas Incríveis",
           subtitle: "Escolha o tema perfeito para a sua celebração especial",
           magical: {
-            name: "Aventura Mágica",
-            description: "Magos, fadas e criaturas mágicas",
-            activities: ["Truques de magia", "Jogos de contos de fadas", "Caça ao tesouro"]
+            name: "Fun",
+            description: "Muita diversao",
+            activities: ["Jogos e brincadeiras"]
           },
           creative: {
-            name: "Festa de Arte Criativa",
+            name: "Fun Fun",
             description: "Pintura, artesanato e expressão criativa",
             activities: ["Pintura facial", "Artes e ofícios", "Decorações DIY"]
           },
           adventure: {
-            name: "Explorador de Aventuras",
+            name: "Super Fun",
             description: "Jogos ao ar livre e exploração",
             activities: ["Cursos de obstáculos", "Caça ao tesouro na natureza", "Jogos de equipa"]
           }
@@ -289,27 +239,27 @@ export const languages = {
           title: "Pacotes de Festa",
           subtitle: "Escolha o pacote perfeito para a sua celebração",
           basic: {
-            name: "Magia Básica",
+            name: "Fun",
             description: "Festa inicial perfeita",
             features: ["Até 8 crianças", "2 horas de diversão", "Decorações básicas", "Jogos e atividades", "Lista de música"]
           },
           premium: {
-            name: "Aventura Premium",
+            name: "Fun Fun",
             description: "Escolha mais popular",
             features: ["Até 12 crianças", "3 horas de magia", "Decorações premium", "Jogos interativos", "Fotos profissionais", "Atividades temáticas"]
           },
           deluxe: {
-            name: "Espetacular Deluxe",
+            name: "Super fun",
             description: "Experiência de festa definitiva",
-            features: ["Até 15 crianças", "4 horas completas", "Decorações completas", "Múltiplas atividades", "Foto e vídeo", "Criação tema personalizado", "Elementos surpresa"]
+            features: ["2 animadores", "4 horas completas", "Caça ao tesouro", "Múltiplas atividades"]
           }
         },
         included: {
           title: "Todas as Festas Incluem",
           subtitle: "Inclusões padrão em todos os pacotes de festa de aniversário",
           decorations: {
-            title: "Decorações",
-            desc: "Decorações temáticas e montagem"
+            title: "Padrao Ted",
+            desc: "Muita diversao com segurança "
           },
           entertainment: {
             title: "Entretenimento",
@@ -326,84 +276,12 @@ export const languages = {
         },
         cta: {
           title: "Prontos para a Festa de Aniversário Definitiva? 🎉",
-          subtitle: "Deixe Ted criar memórias mágicas que a sua criança guardará para sempre!",
+          subtitle: "Deixe Ted criar memórias que a sua criança guardará para sempre!",
           book: "Reservar Agora",
           questions: "Fazer Perguntas"
         }
       },
-      skate: {
-        title: "Aulas de Skate com Ted",
-        description: "Aprenda a andar de skate com confiança! Aulas divertidas, seguras e progressivas para todos os níveis.",
-        levels: {
-          title: "Níveis de Habilidade",
-          subtitle: "Encontre o nível perfeito para a sua jornada no skate",
-          beginner: {
-            name: "Iniciante",
-            description: "Primeiros passos sobre rodas",
-            skills: ["Equilíbrio e postura", "Impulso básico", "Técnicas de queda segura"]
-          },
-          intermediate: {
-            name: "Intermédio",
-            description: "Construindo confiança",
-            skills: ["Curvas e paragens", "Controlo de velocidade", "Truques básicos"]
-          },
-          advanced: {
-            name: "Avançado",
-            description: "Dominar a prancha",
-            skills: ["Truques avançados", "Andar em rampa", "Desenvolvimento de estilo"]
-          }
-        },
-        packages: {
-          title: "Pacotes de Aulas",
-          subtitle: "Escolha o pacote perfeito para os seus objetivos no skate",
-          single: {
-            title: "Aula Individual",
-            description: "Perfeito para experimentar",
-            features: ["Sessão de 1 hora", "Todo equipamento incluído", "Atenção pessoal", "Equipamento de segurança fornecido"]
-          },
-          package4: {
-            title: "Pacote 4 Aulas",
-            description: "Opção de grande valor",
-            features: ["4 x sessões de 1 hora", "Construção progressiva de habilidades", "Equipamento incluído", "Acompanhe o seu progresso"]
-          },
-          package8: {
-            title: "Curso 8 Aulas",
-            description: "Caminho completo para mestria",
-            features: ["8 x sessões de 1 hora", "De iniciante a avançado", "Equipamento incluído", "Certificado de conclusão"]
-          },
-          group: {
-            title: "Aulas em Grupo",
-            description: "Diversão com amigos",
-            features: ["Mínimo 4 pessoas", "Experiência partilhada", "Construção de equipa", "Ótimo para festas"]
-          }
-        },
-        safety: {
-          title: "Segurança e Equipamento",
-          subtitle: "A sua segurança é a nossa prioridade",
-          safetyFirst: {
-            title: "Segurança Primeiro",
-            desc: "Instrução profissional de segurança"
-          },
-          expertTeaching: {
-            title: "Ensino Especializado",
-            desc: "Instrutor experiente e certificado"
-          },
-          qualityEquipment: {
-            title: "Equipamento de Qualidade",
-            desc: "Skateboards e equipamento profissionais"
-          },
-          provenMethod: {
-            title: "Método Comprovado",
-            desc: "Abordagem de aprendizagem progressiva"
-          }
-        },
-        cta: {
-          title: "Pronto para Andar? 🛹",
-          subtitle: "Comece a sua jornada no skate com Ted e domine a prancha com confiança!",
-          book: "Reservar Primeira Aula",
-          questions: "Fazer Perguntas"
-        }
-      }
+      
     },
     about: {
       title: "Conhece Ted!",
@@ -493,8 +371,7 @@ export const languages = {
         services: {
           select: "Selecione um serviço",
           babysitting: "Babysitting",
-          birthday: "Festa Aniversário",
-          skate: "Aulas Skate",
+          birthday: "Festa Aniversário"
           other: "Outro"
         }
       },
@@ -571,24 +448,23 @@ export const languages = {
       home: "Home",
       babysitting: "Babysitting",
       birthdays: "Birthday Parties", 
-      skate: "Skate Lessons",
       about: "About Ted",
       contact: "Contact"
     },
     hero: {
-      title: "Magical Fun with Ted!",
-      subtitle: "Babysitting, birthday parties and skate lessons filled with magic and adventure",
+      title: "Fun with Ted!",
+      subtitle: "Babysitting, birthday parties",
       cta: "Discover Services",
       checkAvailability: "Check Availability"
     },
     services: {
       title: "Magical Services",
-      subtitle: "From babysitting adventures to birthday party magic and skate lessons - Ted makes every moment special!",
+      subtitle: "From babysitting adventures to birthday Ted makes every moment special!",
       babysitting: {
         title: "Babysitting with Ted",
         description: "Professional babysitting services with creative activities, games, and lots of laughter!",
         schedule: "Flexible hours available",
-        location: "Faro region and surrounding areas",
+        location: "Algarve",
         season: "Available year-round",
         features: [
           "Free play activities and games",
@@ -615,13 +491,13 @@ export const languages = {
         },
         cta: {
           title: "Ready to Book Ted?",
-          subtitle: "Create magical memories for your children with professional babysitting!",
+          subtitle: "For your children with professional babysitting!",
           book: "Check Availability",
           contact: "Contact Ted"
         }
       },
       birthdays: {
-        title: "Magical Birthday Parties",
+        title: "Birthday Parties",
         description: "Unforgettable themed birthday parties filled with magic, games, and endless fun!",
         themes: {
           title: "Amazing Party Themes",
